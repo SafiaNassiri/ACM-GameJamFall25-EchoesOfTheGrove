@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dicia1tagncnf" path="res://Assets/sky_and_clouds_bg/New free backgrounds part2/background 1/4.png" id="4_xpsax"]
 [ext_resource type="Texture2D" uid="uid://dxjxyquwxc4f0" path="res://Assets/stringstar_fields/tileset.png" id="5_ib6bj"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8nfud"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27x7k"]
 texture = ExtResource("5_ib6bj")
 0:0/0 = 0
 1:0/0 = 0
@@ -182,11 +182,11 @@ texture = ExtResource("5_ib6bj")
 9:10/0 = 0
 9:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSet" id="TileSet_8o7jr"]
+[sub_resource type="TileSet" id="TileSet_pn8g1"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_8nfud")
+sources/0 = SubResource("TileSetAtlasSource_27x7k")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pp3mg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yj4g4"]
 texture = ExtResource("5_ib6bj")
 0:0/0 = 0
 1:0/0 = 0
@@ -328,10 +328,10 @@ texture = ExtResource("5_ib6bj")
 8:10/0 = 0
 9:10/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_dpe1c"]
-sources/1 = SubResource("TileSetAtlasSource_pp3mg")
+[sub_resource type="TileSet" id="TileSet_xpsax"]
+sources/1 = SubResource("TileSetAtlasSource_yj4g4")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_515qa"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ib6bj"]
 texture = ExtResource("5_ib6bj")
 0:0/0 = 0
 1:0/0 = 0
@@ -478,63 +478,73 @@ texture = ExtResource("5_ib6bj")
 8:10/0 = 0
 9:10/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_cwv7i"]
+[sub_resource type="TileSet" id="TileSet_8nfud"]
 physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_515qa")
+sources/1 = SubResource("TileSetAtlasSource_ib6bj")
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_27x7k"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8o7jr"]
 
 [node name="SampleLevel02" type="Node2D"]
 
-[node name="BG0" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.2, 0.2)
-repeat_size = Vector2(160, 0)
+[node name="BG" type="Node2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="BG0"]
-position = Vector2(134, 82)
+[node name="BG0" type="Parallax2D" parent="BG"]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(403, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/BG0"]
+texture_filter = 1
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_27x7k")
+centered = false
 
-[node name="BG1" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.4, 0.4)
-repeat_size = Vector2(160, 0)
+[node name="BG1" type="Parallax2D" parent="BG"]
+scroll_scale = Vector2(0.2, 0.2)
+repeat_size = Vector2(403, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="BG1"]
-position = Vector2(134, 82)
+[node name="Sprite2D" type="Sprite2D" parent="BG/BG1"]
+texture_filter = 1
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_pn8g1")
+centered = false
 
-[node name="BG2" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.6, 0.6)
-repeat_size = Vector2(160, 0)
+[node name="BG2" type="Parallax2D" parent="BG"]
+scroll_scale = Vector2(0.3, 0.3)
+repeat_size = Vector2(403, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="BG2"]
-position = Vector2(134, 82)
+[node name="Sprite2D" type="Sprite2D" parent="BG/BG2"]
+texture_filter = 1
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("3_yj4g4")
+centered = false
 
-[node name="BG3" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.8, 0.8)
-repeat_size = Vector2(160, 0)
+[node name="BG3" type="Parallax2D" parent="BG"]
+scroll_scale = Vector2(0.4, 0.4)
+repeat_size = Vector2(403, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="BG3"]
-position = Vector2(134, 82)
+[node name="Sprite2D" type="Sprite2D" parent="BG/BG3"]
+texture_filter = 1
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("4_xpsax")
+centered = false
 
 [node name="Ground" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAAAAsAAAAAAAkAAAABAAsAAAAAAAkAAAACAAsAAAAAAAkAAAADAAsAAAAAAAkAAAAEAAsAAAAAAAkAAAAFAAsAAAAAAAkAAAAGAAsAAAAAAAkAAAAHAAsAAAAAAAkAAAAIAAsAAAAAAAkAAAAJAAsAAAAAAAkAAAAKAAsAAAAAAAkAAAALAAsAAAAAAAkAAAAMAAsAAAAAAAkAAAANAAsAAAAAAAkAAAAOAAsAAAAAAAkAAAAPAAsAAAAAAAkAAAAQAAsAAAAAAAkAAAARAAsAAAAAAAkAAAASAAsAAAAAAAkAAAATAAsAAAAAAAkAAAAUAAsAAAAAAAkAAAAAAAoAAAAAAAkAAAAAAAkAAAADAAkAAAAAAAgAAAAAAAkAAAAAAAcAAAAAAAkAAAAAAAYAAAAAAAkAAAAAAAUAAAAKAAkAAAABAAcAAAAAAAkAAAABAAgAAAAAAAkAAAABAAkAAAAAAAkAAAABAAoAAAAAAAkAAAADAAUAAAABAAoAAFABAAUAAAALAAkAAAACAAUAAAAOAAkAAAADAAYAAAAFAAkAAFADAAcAAAAMAAkAAFADAAgAAAALAAkAAFACAAcAAAARAAkAAAABAAYAAAAAAAkAAAACAAYAAAAAAAkAAAACAAgAAAAAAAkAAAACAAkAAAAEAAoAAAACAAoAAAAAAAkAAAADAAkAAAAFAAoAAAAEAAkAAAAEAAkAAAAEAAoAAAAAAAkAAAADAAoAAAAAAAkAAAAFAAoAAAAAAAkAAAAGAAoAAAAAAAkAAAAHAAoAAAAAAAkAAAAIAAoAAAAAAAkAAAAJAAoAAAAAAAkAAAAKAAoAAAAAAAkAAAALAAoAAAAEAAkAAAAMAAoAAAAFAAkAAAANAAoAAAAGAAkAAAAOAAoAAAAHAAkAAAAPAAoAAAABAAkAAAAQAAoAAAACAAkAAAARAAoAAAADAAkAAAASAAoAAAAGAAoAAAATAAoAAAAHAAoAAAAUAAoAAAAAAAkAAAAFAAkAAAAFAAkAAAAGAAkAAAAOAAkAAAAHAAkAAAAPAAkAAAAIAAkAAAAQAAkAAAAJAAkAAAALAAkAAAAKAAkAAAABAAoAAFAPAAkAAAAAAAoAAAAQAAkAAAAPAAkAAAARAAkAAAAQAAkAAAASAAkAAAAFAAkAAAATAAkAAAAGAAkAAAAUAAkAAAAHAAkAAAAJAAMAAAAAAAoAAAAJAAQAAAAAAAoAAGAKAAMAAAAEAAkAAAAKAAQAAAAEAAkAADALAAMAAAABAAoAAFALAAQAAAABAAoAADA=")
-tile_set = SubResource("TileSet_8o7jr")
+tile_set = SubResource("TileSet_pn8g1")
 
 [node name="Foreground" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAAAAEAAQAAAAUAAAAAAAIAAQAAAAYAAAAAAAMAAQAAAAcAAAAAAAQAAQAAAAgAAAABAAEAAQABAAUAAAABAAIAAQABAAYAAAABAAMAAQABAAcAAAABAAQAAQABAAgAAAACAAEAAQACAAUAAAACAAIAAQACAAYAAAACAAMAAQACAAcAAAACAAQAAQACAAgAAAADAAEAAQADAAUAAAADAAIAAQADAAYAAAADAAMAAQADAAcAAAADAAQAAQAJAAcAAAAEAAgAAQAJAAYAAAAFAAgAAQABAAQAAAALAAkAAQABAAMAACAMAAkAAQABAAMAADANAAkAAQABAAMAACAOAAkAAQABAAMAADAPAAIAAQALAAIAAAAPAAMAAQALAAMAAAAPAAQAAQALAAQAAAAPAAgAAQALAAgAAAAQAAEAAQAMAAEAAAAQAAIAAQAMAAIAAAAQAAMAAQAMAAMAAAAQAAQAAQAMAAQAAAAQAAUAAQAMAAUAAAAQAAYAAQAMAAYAAAAQAAgAAQAMAAgAAAARAAAAAQANAAAAAAARAAEAAQANAAEAAAARAAIAAQANAAIAAAARAAMAAQANAAMAAAARAAQAAQANAAQAAAARAAUAAQANAAUAAAARAAYAAQANAAYAAAARAAcAAQANAAcAAAARAAgAAQANAAgAAAASAAAAAQAOAAAAAAASAAEAAQAOAAEAAAASAAIAAQAOAAIAAAASAAMAAQAOAAMAAAASAAQAAQAOAAQAAAASAAUAAQAOAAUAAAASAAYAAQAOAAYAAAASAAcAAQAOAAcAAAASAAgAAQAOAAgAAAATAAAAAQAPAAAAAAATAAEAAQAPAAEAAAATAAIAAQAPAAIAAAATAAMAAQAPAAMAAAATAAQAAQAPAAQAAAATAAUAAQAPAAUAAAATAAYAAQAPAAYAAAATAAcAAQAPAAcAAAATAAgAAQAPAAgAAAAUAAEAAQAQAAEAAAAUAAIAAQAQAAIAAAAUAAMAAQAQAAMAAAAUAAQAAQAQAAQAAAAUAAUAAQAQAAUAAAAUAAYAAQAQAAYAAAAVAAIAAQARAAIAAAAVAAMAAQARAAMAAAAUAAgAAQAQAAgAAAAVAAgAAQARAAgAAAAVAAkAAQAAAAkAAAAVAAoAAQAAAAkAAAAVAAsAAQAAAAkAAAAGAAgAAQAAAAgAAAAHAAgAAQAKAAgAAAAIAAgAAQADAAgAAAAJAAgAAQAAAAgAAAAKAAgAAQAKAAgAAAAJAAIAAQADAAgAAAAJAAUAAQABAAIAAAAIAAMAAQADAAgAAGAIAAQAAQADAAgAAGAKAAEAAQADAAMAAAAKAAIAAQADAAQAAAAKAAUAAQACAAIAAAAKAAYAAQACAAMAAAAKAAcAAQACAAQAAAALAAEAAQAEAAMAAAALAAIAAQAEAAQAAAALAAUAAQAAAAIAAAALAAYAAQAAAAMAAAAMAAMAAQADAAgAAFAMAAQAAQADAAgAAFA=")
-tile_set = SubResource("TileSet_dpe1c")
+tile_set = SubResource("TileSet_xpsax")
 
 [node name="Plaforms" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAHAAMAAQAFAAQAAAAIAAMAAQAGAAQAAAAEAAUAAQAIAAQAAAAFAAUAAQAJAAQAAAA=")
-tile_set = SubResource("TileSet_cwv7i")
+tile_set = SubResource("TileSet_8nfud")
 
 [node name="Player" parent="." instance=ExtResource("1_jtp72")]
-position = Vector2(46, -30)
+position = Vector2(19, 29)
 
 [node name="WorldFloor" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldFloor"]
 position = Vector2(1, 194)
-shape = SubResource("WorldBoundaryShape2D_27x7k")
+shape = SubResource("WorldBoundaryShape2D_8o7jr")
