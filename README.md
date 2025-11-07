@@ -53,10 +53,10 @@ Thistle’s form scatters into motes of light, carried on the forest’s breath.
 
 | Action | Key / Button |
 |--------|---------------|
-| Move | ← / → or A / D |
+| Move | ← / → or A / D / joycon (controller)|
 | Jump | Space / A (controller) |
 | Dash | Shift / RT |
-| Interact / Play | E / X |
+| Interact / Play | Enter / X |
 | Pause | Esc |
 
 ---
