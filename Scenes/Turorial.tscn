@@ -483,6 +483,38 @@ sources/1 = SubResource("TileSetAtlasSource_ti3ww")
 
 [node name="SampleLevel01" type="Node2D"]
 
+[node name="BG0" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.2, 0.2)
+repeat_size = Vector2(160, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG0"]
+position = Vector2(134, 82)
+texture = ExtResource("1_so476")
+
+[node name="BG1" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.4, 0.4)
+repeat_size = Vector2(160, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG1"]
+position = Vector2(134, 82)
+texture = ExtResource("2_pdlix")
+
+[node name="BG2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.6, 0.6)
+repeat_size = Vector2(160, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG2"]
+position = Vector2(134, 82)
+texture = ExtResource("3_s5ydj")
+
+[node name="BG3" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.8, 0.8)
+repeat_size = Vector2(160, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG3"]
+position = Vector2(134, 82)
+texture = ExtResource("4_iixa2")
+
 [node name="Ground" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAAAAsAAAAAAAkAAAABAAsAAAAAAAkAAAACAAsAAAAAAAkAAAADAAsAAAAAAAkAAAAEAAsAAAAAAAkAAAAFAAsAAAAAAAkAAAAGAAsAAAAAAAkAAAAHAAsAAAAAAAkAAAAIAAsAAAAAAAkAAAAJAAsAAAAAAAkAAAAKAAsAAAAAAAkAAAALAAsAAAAAAAkAAAAMAAsAAAAAAAkAAAANAAsAAAAAAAkAAAAOAAsAAAAAAAkAAAAPAAsAAAAAAAkAAAAQAAsAAAAAAAkAAAARAAsAAAAAAAkAAAASAAsAAAAAAAkAAAATAAsAAAAAAAkAAAAUAAsAAAAAAAkAAAAAAAoAAAAAAAkAAAAAAAkAAAADAAkAAAAAAAgAAAAAAAkAAAAAAAcAAAAAAAkAAAAAAAYAAAAAAAkAAAAAAAUAAAAKAAkAAAABAAcAAAAAAAkAAAABAAgAAAAAAAkAAAABAAkAAAAAAAkAAAABAAoAAAAAAAkAAAADAAUAAAABAAoAAFABAAUAAAALAAkAAAACAAUAAAAOAAkAAAADAAYAAAAFAAkAAFADAAcAAAAMAAkAAFADAAgAAAALAAkAAFACAAcAAAARAAkAAAABAAYAAAAAAAkAAAACAAYAAAAAAAkAAAACAAgAAAAAAAkAAAACAAkAAAAEAAoAAAACAAoAAAAAAAkAAAADAAkAAAAFAAoAAAAEAAkAAAAEAAkAAAAEAAoAAAAAAAkAAAADAAoAAAAAAAkAAAAFAAoAAAAAAAkAAAAGAAoAAAAAAAkAAAAHAAoAAAAAAAkAAAAIAAoAAAAAAAkAAAAJAAoAAAAAAAkAAAAKAAoAAAAAAAkAAAALAAoAAAAEAAkAAAAMAAoAAAAFAAkAAAANAAoAAAAGAAkAAAAOAAoAAAAHAAkAAAAPAAoAAAABAAkAAAAQAAoAAAACAAkAAAARAAoAAAADAAkAAAASAAoAAAAGAAoAAAATAAoAAAAHAAoAAAAUAAoAAAAAAAkAAAAFAAkAAAAFAAkAAAAGAAkAAAAOAAkAAAAHAAkAAAAPAAkAAAAIAAkAAAAQAAkAAAAJAAkAAAALAAkAAAAKAAkAAAABAAoAAFAPAAkAAAAAAAoAAAAQAAkAAAAPAAkAAAARAAkAAAAQAAkAAAASAAkAAAAFAAkAAAATAAkAAAAGAAkAAAAUAAkAAAAHAAkAAAAJAAMAAAAAAAoAAAAJAAQAAAAAAAoAAGAKAAMAAAAEAAkAAAAKAAQAAAAEAAkAADALAAMAAAABAAoAAFALAAQAAAABAAoAADA=")
 tile_set = SubResource("TileSet_ti3ww")
@@ -494,37 +526,3 @@ tile_set = SubResource("TileSet_kh52k")
 [node name="Plaforms" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAHAAMAAQAFAAQAAAAIAAMAAQAGAAQAAAAEAAUAAQAIAAQAAAAFAAUAAQAJAAQAAAA=")
 tile_set = SubResource("TileSet_i7j26")
-
-[node name="BGs" type="Node" parent="."]
-
-[node name="BG0" type="Parallax2D" parent="BGs"]
-scroll_scale = Vector2(0.2, 0.2)
-repeat_size = Vector2(160, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="BGs/BG0"]
-position = Vector2(134, 82)
-texture = ExtResource("1_so476")
-
-[node name="BG1" type="Parallax2D" parent="BGs"]
-scroll_scale = Vector2(0.4, 0.4)
-repeat_size = Vector2(160, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="BGs/BG1"]
-position = Vector2(134, 82)
-texture = ExtResource("2_pdlix")
-
-[node name="BG2" type="Parallax2D" parent="BGs"]
-scroll_scale = Vector2(0.6, 0.6)
-repeat_size = Vector2(160, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="BGs/BG2"]
-position = Vector2(134, 82)
-texture = ExtResource("3_s5ydj")
-
-[node name="BG3" type="Parallax2D" parent="BGs"]
-scroll_scale = Vector2(0.8, 0.8)
-repeat_size = Vector2(160, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="BGs/BG3"]
-position = Vector2(134, 82)
-texture = ExtResource("4_iixa2")
