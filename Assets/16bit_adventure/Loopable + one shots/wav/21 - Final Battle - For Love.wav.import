@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://1tr4j5e86y6j"
+path="res://.godot/imported/21 - Final Battle - For Love.wav-28f17303e6ee61ed62087a27f7a548cc.sample"
+
+[deps]
+
+source_file="res://Assets/16bit_adventure/Loopable + one shots/wav/21 - Final Battle - For Love.wav"
+dest_files=["res://.godot/imported/21 - Final Battle - For Love.wav-28f17303e6ee61ed62087a27f7a548cc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

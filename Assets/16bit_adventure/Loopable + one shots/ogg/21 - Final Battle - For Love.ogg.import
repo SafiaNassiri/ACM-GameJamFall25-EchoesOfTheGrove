@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cndd6d5yvsh87"
+path="res://.godot/imported/21 - Final Battle - For Love.ogg-34dcbf0bd4ff7d7bb4a2b1d5c132d121.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/16bit_adventure/Loopable + one shots/ogg/21 - Final Battle - For Love.ogg"
+dest_files=["res://.godot/imported/21 - Final Battle - For Love.ogg-34dcbf0bd4ff7d7bb4a2b1d5c132d121.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

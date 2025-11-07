@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://twouo7b5lxdh"
+path="res://.godot/imported/03 - Definitely Our Town.ogg-ea2f5ae735dbd5fbf9fc42f113492d29.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/16bit_adventure/Loopable + one shots/ogg/03 - Definitely Our Town.ogg"
+dest_files=["res://.godot/imported/03 - Definitely Our Town.ogg-ea2f5ae735dbd5fbf9fc42f113492d29.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

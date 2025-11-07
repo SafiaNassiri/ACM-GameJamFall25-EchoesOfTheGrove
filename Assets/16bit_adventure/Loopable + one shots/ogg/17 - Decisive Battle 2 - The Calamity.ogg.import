@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cjhbucrvk44oj"
+path="res://.godot/imported/17 - Decisive Battle 2 - The Calamity.ogg-24ffb081ac5b0a6d022201a7ead9604a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/16bit_adventure/Loopable + one shots/ogg/17 - Decisive Battle 2 - The Calamity.ogg"
+dest_files=["res://.godot/imported/17 - Decisive Battle 2 - The Calamity.ogg-24ffb081ac5b0a6d022201a7ead9604a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

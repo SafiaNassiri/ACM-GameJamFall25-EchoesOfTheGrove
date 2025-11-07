@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d8kqihdk5ggm"
+path="res://.godot/imported/15 - Peaceful Night .wav-35480cc80cb352177b29e64f7ab6d8a6.sample"
+
+[deps]
+
+source_file="res://Assets/16bit_adventure/Loopable + one shots/wav/15 - Peaceful Night .wav"
+dest_files=["res://.godot/imported/15 - Peaceful Night .wav-35480cc80cb352177b29e64f7ab6d8a6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

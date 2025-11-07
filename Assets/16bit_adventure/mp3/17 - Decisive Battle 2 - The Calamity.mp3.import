@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c4qo74ckmhrum"
+path="res://.godot/imported/17 - Decisive Battle 2 - The Calamity.mp3-70a1cc52302c4722486991ce1c55e5a3.mp3str"
+
+[deps]
+
+source_file="res://Assets/16bit_adventure/mp3/17 - Decisive Battle 2 - The Calamity.mp3"
+dest_files=["res://.godot/imported/17 - Decisive Battle 2 - The Calamity.mp3-70a1cc52302c4722486991ce1c55e5a3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://kmh61xdcy2ld"
+path="res://.godot/imported/16 - The Calm Before The Storm.mp3-008fa546e441d38e8ef33d57c2b76c93.mp3str"
+
+[deps]
+
+source_file="res://Assets/16bit_adventure/mp3/16 - The Calm Before The Storm.mp3"
+dest_files=["res://.godot/imported/16 - The Calm Before The Storm.mp3-008fa546e441d38e8ef33d57c2b76c93.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

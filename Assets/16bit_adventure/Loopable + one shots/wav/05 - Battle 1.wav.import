@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://314k26bo85r4"
+path="res://.godot/imported/05 - Battle 1.wav-913a36b124cf8319fc062d54d934a70c.sample"
+
+[deps]
+
+source_file="res://Assets/16bit_adventure/Loopable + one shots/wav/05 - Battle 1.wav"
+dest_files=["res://.godot/imported/05 - Battle 1.wav-913a36b124cf8319fc062d54d934a70c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

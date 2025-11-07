@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dfoi1wecsmf81"
+path="res://.godot/imported/19 - Where The Winds Roam.mp3-987c57247a10a257e325b6478e0782f9.mp3str"
+
+[deps]
+
+source_file="res://Assets/16bit_adventure/mp3/19 - Where The Winds Roam.mp3"
+dest_files=["res://.godot/imported/19 - Where The Winds Roam.mp3-987c57247a10a257e325b6478e0782f9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

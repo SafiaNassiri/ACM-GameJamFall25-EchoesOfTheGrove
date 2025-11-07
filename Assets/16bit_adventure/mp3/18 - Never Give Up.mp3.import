@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxoyxfwjrx7to"
+path="res://.godot/imported/18 - Never Give Up.mp3-5c607550d1b87f62ce9b4cfc6f11a8c1.mp3str"
+
+[deps]
+
+source_file="res://Assets/16bit_adventure/mp3/18 - Never Give Up.mp3"
+dest_files=["res://.godot/imported/18 - Never Give Up.mp3-5c607550d1b87f62ce9b4cfc6f11a8c1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://jp1qj60r5juv"
+path="res://.godot/imported/06 - Victory!.ogg-9c8ebe79d10baee7de4dda77e3f5328f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/16bit_adventure/Loopable + one shots/ogg/06 - Victory!.ogg"
+dest_files=["res://.godot/imported/06 - Victory!.ogg-9c8ebe79d10baee7de4dda77e3f5328f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

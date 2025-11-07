@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d2dcc2yhyctux"
+path="res://.godot/imported/02 - Title Theme.ogg-c5a5b20a61626e4d2beb94db63a33b53.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/16bit_adventure/Loopable + one shots/ogg/02 - Title Theme.ogg"
+dest_files=["res://.godot/imported/02 - Title Theme.ogg-c5a5b20a61626e4d2beb94db63a33b53.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

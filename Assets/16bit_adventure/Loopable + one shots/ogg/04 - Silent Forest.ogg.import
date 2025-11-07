@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dm6kn2pyo68ij"
+path="res://.godot/imported/04 - Silent Forest.ogg-6d32defbb9373438e148cfff4e47389f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/16bit_adventure/Loopable + one shots/ogg/04 - Silent Forest.ogg"
+dest_files=["res://.godot/imported/04 - Silent Forest.ogg-6d32defbb9373438e148cfff4e47389f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
