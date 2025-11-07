@@ -13,7 +13,7 @@ config_version=5
 config/name="Echoes of the Grove"
 run/main_scene="uid://dgrl74clpngs1"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://d0scwj1peor1r"
 
 [debug]
 
