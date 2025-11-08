@@ -10,9 +10,10 @@ font = ExtResource("1_oh87e")
 
 [node name="TimerLabel" type="Label" parent="."]
 unique_name_in_owner = true
-offset_left = 280.0
-offset_right = 320.0
-offset_bottom = 23.0
+offset_left = 268.0
+offset_top = 7.0
+offset_right = 308.0
+offset_bottom = 39.0
 text = "10"
 label_settings = SubResource("LabelSettings_chlih")
 horizontal_alignment = 2

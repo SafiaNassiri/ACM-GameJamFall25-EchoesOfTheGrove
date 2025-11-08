@@ -1,8 +1,9 @@
-[gd_scene load_steps=82 format=3 uid="uid://b7poyxaahhbiv"]
+[gd_scene load_steps=83 format=3 uid="uid://b7poyxaahhbiv"]
 
 [ext_resource type="PackedScene" uid="uid://c4g4oca6dw3xy" path="res://Player/Handlers/death_handler.tscn" id="1_btcbx"]
 [ext_resource type="Texture2D" uid="uid://b5q0m2pp413bo" path="res://Assets/satyr_sprite_sheet/SPRITE_SHEET.png" id="1_l8h54"]
 [ext_resource type="PackedScene" uid="uid://dfmabd0lg7jmi" path="res://Player/Handlers/movement_handler.tscn" id="3_gwnis"]
+[ext_resource type="PackedScene" uid="uid://bu5se02m23rm" path="res://Player/Handlers/interaction_handler.tscn" id="4_gwnis"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ntmi"]
 atlas = ExtResource("1_l8h54")
@@ -608,3 +609,5 @@ shape = SubResource("RectangleShape2D_lhliw")
 [node name="MovementHandler" parent="." instance=ExtResource("3_gwnis")]
 
 [node name="DeathHandler" parent="." instance=ExtResource("1_btcbx")]
+
+[node name="InteractionHandler" parent="." instance=ExtResource("4_gwnis")]
