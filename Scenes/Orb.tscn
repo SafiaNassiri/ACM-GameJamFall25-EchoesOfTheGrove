@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=3 uid="uid://diranjy8hn8vn"]
+
+[ext_resource type="Texture2D" uid="uid://h4o57klf2fyu" path="res://Assets/Wind Effect 02/Air Explosion.png" id="1_ovppq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cxvw"]
+atlas = ExtResource("1_ovppq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgmpi"]
+atlas = ExtResource("1_ovppq")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyjc6"]
+atlas = ExtResource("1_ovppq")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_af5qb"]
+atlas = ExtResource("1_ovppq")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak8jo"]
+atlas = ExtResource("1_ovppq")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qg53"]
+atlas = ExtResource("1_ovppq")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kq2da"]
+atlas = ExtResource("1_ovppq")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56lw8"]
+atlas = ExtResource("1_ovppq")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a36aq"]
+atlas = ExtResource("1_ovppq")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jlymj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cxvw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgmpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyjc6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_af5qb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ak8jo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qg53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kq2da")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56lw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a36aq")
+}],
+"loop": true,
+"name": &"Orb",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ovppq"]
+radius = 17.029387
+
+[node name="Orb" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_jlymj")
+animation = &"Orb"
+autoplay = "Orb"
+frame_progress = 0.65937614
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ovppq")
