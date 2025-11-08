@@ -561,7 +561,7 @@ tile_map_data = PackedByteArray("AAAHAAMAAQAFAAQAAAAIAAMAAQAGAAQAAAAEAAUAAQAIAAQ
 tile_set = SubResource("TileSet_i7j26")
 
 [node name="Player" parent="." instance=ExtResource("6_pdlix")]
-position = Vector2(-10, 70)
+position = Vector2(-29, 69)
 
 [node name="WorldFloor" type="StaticBody2D" parent="."]
 
@@ -572,7 +572,7 @@ shape = SubResource("WorldBoundaryShape2D_pdlix")
 [node name="WorldLeft Wall" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldLeft Wall"]
-position = Vector2(-25, 0)
+position = Vector2(-54, 0)
 rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_pdlix")
 
