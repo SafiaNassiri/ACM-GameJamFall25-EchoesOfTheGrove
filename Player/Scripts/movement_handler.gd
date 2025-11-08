@@ -1,44 +1,51 @@
-extends CharacterBody2D
+extends Node
 
 @export var speed: float = 160.0
 @export var jump_velocity: float = -400.0
 @export var gravity: float = 980.0
 @export var jump_cutoff_gravity_mult: float = 3.0
 
-@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var body: CharacterBody2D = get_parent() as CharacterBody2D
+@onready var sprite: AnimatedSprite2D = body.get_node_or_null("AnimatedSprite2D") as AnimatedSprite2D
 
 enum State { IDLE, RUN, JUMP, FALL }
 var state: State = State.IDLE
 
 func _physics_process(delta: float) -> void:
-	if not is_on_floor():
-		velocity.y += gravity * delta
-	if velocity.y < 0.0 and not Input.is_action_pressed("player_jump"):
-		velocity.y += gravity * (jump_cutoff_gravity_mult - 1.0) * delta
+	if body == null:
+		return
 
-	if Input.is_action_just_pressed("player_jump") and is_on_floor():
-		velocity.y = jump_velocity
+	if not body.is_on_floor():
+		body.velocity.y += gravity * delta
+	if body.velocity.y < 0.0 and not Input.is_action_pressed("player_jump"):
+		body.velocity.y += gravity * (jump_cutoff_gravity_mult - 1.0) * delta
+
+	if Input.is_action_just_pressed("player_jump") and body.is_on_floor():
+		body.velocity.y = jump_velocity
 
 	var dir: float = Input.get_axis("player_left", "player_right")
 	if dir != 0.0:
-		velocity.x = dir * speed
+		body.velocity.x = dir * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0.0, speed)
+		body.velocity.x = move_toward(body.velocity.x, 0.0, speed)
 
-	move_and_slide()
+	body.move_and_slide()
 	_update_state()
 	_apply_animation()
 
 func _update_state() -> void:
-	if not is_on_floor():
-		state = State.FALL if velocity.y > 0.0 else State.JUMP
+	if not body.is_on_floor():
+		state = State.FALL if body.velocity.y > 0.0 else State.JUMP
 	else:
-		state = State.RUN if abs(velocity.x) > 5.0 else State.IDLE
+		state = State.RUN if abs(body.velocity.x) > 5.0 else State.IDLE
 
 func _apply_animation() -> void:
-	if velocity.x < -1.0:
+	if sprite == null:
+		return
+
+	if body.velocity.x < -1.0:
 		sprite.flip_h = true
-	elif velocity.x > 1.0:
+	elif body.velocity.x > 1.0:
 		sprite.flip_h = false
 
 	match state:

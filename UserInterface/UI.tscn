@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6d0epgnqqkw6"]
+
+[ext_resource type="FontFile" uid="uid://dx6nbsbqegcnj" path="res://Fonts/PixelOperator.ttf" id="1_oh87e"]
+[ext_resource type="Script" uid="uid://dtdt3egbuso3d" path="res://UserInterface/timer_label.gd" id="2_chlih"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_chlih"]
+font = ExtResource("1_oh87e")
+
+[node name="Ui" type="CanvasLayer"]
+
+[node name="TimerLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 280.0
+offset_right = 320.0
+offset_bottom = 23.0
+text = "10"
+label_settings = SubResource("LabelSettings_chlih")
+horizontal_alignment = 2
+script = ExtResource("2_chlih")

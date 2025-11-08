@@ -1,7 +1,8 @@
-[gd_scene load_steps=81 format=3 uid="uid://b7poyxaahhbiv"]
+[gd_scene load_steps=82 format=3 uid="uid://b7poyxaahhbiv"]
 
-[ext_resource type="Script" uid="uid://dyk2egj3j3x78" path="res://Player/Scripts/movement_handler.gd" id="1_4ntmi"]
+[ext_resource type="PackedScene" uid="uid://c4g4oca6dw3xy" path="res://Player/Handlers/death_handler.tscn" id="1_btcbx"]
 [ext_resource type="Texture2D" uid="uid://b5q0m2pp413bo" path="res://Assets/satyr_sprite_sheet/SPRITE_SHEET.png" id="1_l8h54"]
+[ext_resource type="PackedScene" uid="uid://dfmabd0lg7jmi" path="res://Player/Handlers/movement_handler.tscn" id="3_gwnis"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ntmi"]
 atlas = ExtResource("1_l8h54")
@@ -425,7 +426,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jp1hh")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
 "speed": 6.0
 }, {
@@ -465,7 +466,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1l10g")
 }],
-"loop": true,
+"loop": false,
 "name": &"hurt",
 "speed": 10.0
 }, {
@@ -592,16 +593,18 @@ animations = [{
 size = Vector2(10, 18)
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_4ntmi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3bga3")
-animation = &"idle"
+animation = &"hurt"
 autoplay = "idle"
-frame_progress = 0.14736542
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_lhliw")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MovementHandler" parent="." instance=ExtResource("3_gwnis")]
+
+[node name="DeathHandler" parent="." instance=ExtResource("1_btcbx")]

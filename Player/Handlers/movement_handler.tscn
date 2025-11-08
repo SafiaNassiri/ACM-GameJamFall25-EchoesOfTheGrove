@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfmabd0lg7jmi"]
+
+[ext_resource type="Script" uid="uid://dyk2egj3j3x78" path="res://Player/Scripts/movement_handler.gd" id="1_c52tx"]
+
+[node name="MovementHandler" type="Node"]
+script = ExtResource("1_c52tx")
