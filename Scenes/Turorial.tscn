@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://dgrl74clpngs1"]
+[gd_scene load_steps=21 format=4 uid="uid://dgrl74clpngs1"]
 
 [ext_resource type="Texture2D" uid="uid://dk21jjdqu8bvg" path="res://Assets/sky_and_clouds_bg/New free backgrounds part2/background 1/1.png" id="1_so476"]
 [ext_resource type="Texture2D" uid="uid://dxjxyquwxc4f0" path="res://Assets/stringstar_fields/tileset.png" id="1_yvd2y"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b7poyxaahhbiv" path="res://Player/player.tscn" id="6_pdlix"]
 [ext_resource type="PackedScene" uid="uid://diranjy8hn8vn" path="res://Scenes/Orb.tscn" id="8_iixa2"]
 [ext_resource type="PackedScene" uid="uid://c6d0epgnqqkw6" path="res://UserInterface/UI.tscn" id="9_vwu32"]
+[ext_resource type="PackedScene" uid="uid://ctj1kd718ih4b" path="res://Assets/CatEnemy/BeigeCatEnemy.tscn" id="10_ryxav"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iixa2"]
 texture = ExtResource("5_s5ydj")
@@ -627,3 +628,6 @@ position = Vector2(548, 167)
 position = Vector2(422, 72)
 
 [node name="Ui" parent="." instance=ExtResource("9_vwu32")]
+
+[node name="CatEnemy1" parent="." instance=ExtResource("10_ryxav")]
+position = Vector2(202, 151)
