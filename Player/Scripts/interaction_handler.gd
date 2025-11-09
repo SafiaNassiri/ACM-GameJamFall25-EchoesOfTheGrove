@@ -24,7 +24,7 @@ var action_icons: Dictionary[String, Array] = {
 }
 
 @export var base_scale: float = 1.0
-@export var icon_scale: float = 1.0
+@export var icon_scale: float = 0.5
 @export var icon_gap: float = 4.0
 @export var chunk_gap: float = 6.0
 
@@ -136,9 +136,7 @@ func _render_prompt(prompt: Node2D, text: String) -> void:
 				var sz2: Vector2 = Vector2(tex.get_size()) * icon_scale
 				var tr: TextureRect = TextureRect.new()
 				tr.texture = tex
-				tr.stretch_mode = TextureRect.STRETCH_SCALE
-				tr.custom_minimum_size = sz2
-				tr.size = sz2
+				tr.scale = Vector2.ONE * icon_scale
 				tr.position = Vector2(x, y + v_offset)
 				prompt.add_child(tr)
 				x += sz2.x
