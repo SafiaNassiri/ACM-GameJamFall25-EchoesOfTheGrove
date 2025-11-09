@@ -608,6 +608,16 @@ shape = SubResource("RectangleShape2D_s5ydj")
 [node name="Prompt" type="Node2D" parent="Trigger Area/OrbSign"]
 position = Vector2(0, -60)
 
+[node name="ExitSign" type="Area2D" parent="Trigger Area" groups=["sign"]]
+position = Vector2(359, 133)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger Area/ExitSign"]
+position = Vector2(369, -47)
+shape = SubResource("RectangleShape2D_s5ydj")
+
+[node name="Prompt" type="Node2D" parent="Trigger Area/ExitSign"]
+position = Vector2(369, -73)
+
 [node name="Orbs" type="Node2D" parent="."]
 
 [node name="Orb2" parent="Orbs" instance=ExtResource("8_iixa2")]

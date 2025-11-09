@@ -1,9 +1,10 @@
 extends Area2D
 
 @export var sign_texts: Dictionary[String, String] = {
-	"JumpSign": "{jump} Press to jump",
-	"WalkSign": "{move} Move left/right",
-	"OrbSign": "Collect the orbs"
+	"JumpSign": "{jump1}OR {jump2} Press to jump",
+	"WalkSign": "{move1}OR {move2} Move left/right",
+	"OrbSign": "Collect the orbs",
+	"ExitSign": "You may now commence your journey, Thistle."
 }
 
 const TOKEN_REGEX: String = r"\{([a-zA-Z0-9_]+)\}"
@@ -13,13 +14,20 @@ var orb_count: int = 0
 var pixel_font: Font = preload("res://Fonts/PixelOperator.ttf")
 
 var action_icons: Dictionary[String, Array] = {
-	"move": [
+	"move1": [
 		preload("res://Assets/ui_icon_pack/resources/keyboard/icon_A_key.tres"),
 		preload("res://Assets/ui_icon_pack/resources/keyboard/icon_D_key.tres")
 	],
-	"jump": [
+	"move2": [
+		preload("res://Assets/ui_icon_pack/resources/keyboard/icon_LeftArrow_key.tres"),
+		preload("res://Assets/ui_icon_pack/resources/keyboard/icon_RightArrow_key.tres")
+	],
+	"jump1": [
 		preload("res://Assets/ui_icon_pack/resources/keyboard/icon_Space_key.tres"),
 		preload("res://Assets/ui_icon_pack/resources/keyboard/icon_W_key.tres")
+	],
+	"jump2": [
+		preload("res://Assets/ui_icon_pack/resources/keyboard/icon_UpArrow_key.tres")
 	]
 }
 
