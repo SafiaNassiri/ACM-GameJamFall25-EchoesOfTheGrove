@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpaneihkbjula"]
+
+[ext_resource type="Script" uid="uid://bq2yx2odakowd" path="res://UserInterface/TutorialUI.gd" id="1_h8hex"]
+
+[node name="TutorialUi" type="CanvasLayer"]
+script = ExtResource("1_h8hex")
+
+[node name="PromptContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 6

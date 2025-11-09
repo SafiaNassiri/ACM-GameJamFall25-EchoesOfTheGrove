@@ -573,7 +573,7 @@ shape = SubResource("WorldBoundaryShape2D_pdlix")
 [node name="WorldLeft Wall" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldLeft Wall"]
-position = Vector2(-51, 0)
+position = Vector2(-54, 0)
 rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_pdlix")
 

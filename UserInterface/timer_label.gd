@@ -1,6 +1,6 @@
 extends Node
 
-@export var start_time: float = 10.0
+@export var start_time: float = 90.0
 @onready var timer_label: Label = %TimerLabel
 
 var time_left: float
