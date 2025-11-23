@@ -16,10 +16,6 @@ config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://d0scwj1peor1r"
 config/windows_native_icon="res://icon.ico"
 
-[autoload]
-
-TutorialUIManager="*res://UserInterface/TutorialUI.tscn"
-
 [debug]
 
 gdscript/warnings/untyped_declaration=2
