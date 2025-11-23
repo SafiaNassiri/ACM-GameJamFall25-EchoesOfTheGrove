@@ -6,7 +6,7 @@ extends Node
 @export var jump_cutoff_gravity_mult: float = 3.0
 
 @export var dash_multiplier: float = 2.0
-@export var dash_duration: float = 0.18
+@export var dash_duration: float = 0.36
 @export var dash_cooldown: float = 0.5
 
 @onready var body: CharacterBody2D = get_parent() as CharacterBody2D
@@ -27,6 +27,7 @@ func _physics_process(delta: float) -> void:
 	if _dash_cd > 0.0:
 		_dash_cd -= delta
 
+	# Dashing: override X, do NOT apply gravity, do NOT modify Y here
 	if _dash_time > 0.0:
 		_dash_time -= delta
 		body.velocity.x = _dash_dir * _dash_speed
@@ -35,6 +36,7 @@ func _physics_process(delta: float) -> void:
 		_apply_animation()
 		return
 
+	# Normal gravity / jump
 	if not body.is_on_floor():
 		body.velocity.y += gravity * delta
 	if body.velocity.y < 0.0 and not Input.is_action_pressed("player_jump"):
@@ -44,9 +46,11 @@ func _physics_process(delta: float) -> void:
 		body.velocity.y = jump_velocity
 
 	var dir: float = Input.get_axis("player_left", "player_right")
+
 	if Input.is_action_just_pressed("player_dash"):
 		_try_start_dash(dir)
 
+	# Normal horizontal movement when not dashing
 	if dir != 0.0:
 		body.velocity.x = dir * speed
 	else:
@@ -59,6 +63,7 @@ func _physics_process(delta: float) -> void:
 func _try_start_dash(input_dir: float) -> void:
 	if _dash_cd > 0.0:
 		return
+
 	var dir_sign: int = 0
 	if input_dir != 0.0:
 		dir_sign = 1 if input_dir > 0.0 else -1
@@ -66,14 +71,22 @@ func _try_start_dash(input_dir: float) -> void:
 		dir_sign = 1 if body.velocity.x > 0.0 else -1
 	else:
 		return
+
 	_dash_dir = dir_sign
 	_dash_speed = max(abs(body.velocity.x), speed) * dash_multiplier
 	_dash_time = dash_duration
 	_dash_cd = dash_cooldown
+
+	# Zero vertical momentum at dash start (but we don't freeze Y afterwards)
+	body.velocity.y = 0.0
+
 	state = State.DASH
+
 	if sprite:
-		if _dash_dir < 0: sprite.flip_h = true
-		elif _dash_dir > 0: sprite.flip_h = false
+		if _dash_dir < 0:
+			sprite.flip_h = true
+		elif _dash_dir > 0:
+			sprite.flip_h = false
 		_play("dash")
 
 func _update_state(is_dashing: bool) -> void:
@@ -93,11 +106,16 @@ func _apply_animation() -> void:
 	elif body.velocity.x > 1.0:
 		sprite.flip_h = false
 	match state:
-		State.IDLE: _play("idle")
-		State.RUN: _play("right")
-		State.JUMP: _play("jump")
-		State.FALL: _play("fall")
-		State.DASH: _play("dash")
+		State.IDLE:
+			_play("idle")
+		State.RUN:
+			_play("right")
+		State.JUMP:
+			_play("jump")
+		State.FALL:
+			_play("fall")
+		State.DASH:
+			_play("dash")
 
 func _play(name: String) -> void:
 	if sprite.animation != name or not sprite.is_playing():
