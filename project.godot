@@ -13,8 +13,10 @@ config_version=5
 config/name="Echoes of the Grove"
 run/main_scene="uid://dgrl74clpngs1"
 config/features=PackedStringArray("4.5", "Forward Plus")
+boot_splash/image="uid://cdi20atgyjvlc"
 config/icon="uid://d0scwj1peor1r"
 config/windows_native_icon="res://icon.ico"
+boot_splash/minimum_display_time=3000
 
 [debug]
 
