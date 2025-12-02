@@ -587,14 +587,14 @@ tile_set = SubResource("TileSet_kh52k")
 tile_map_data = PackedByteArray("AAAHAAMAAQAFAAQAAAAIAAMAAQAGAAQAAAAEAAUAAQAIAAQAAAAFAAUAAQAJAAQAAAAqAAoAAQAHAAQAAAArAAoAAQAGAAQAAAApAAoAAQAFAAQAAAAqAAcAAQAFAAQAAAArAAcAAQAGAAQAAAAxAAkAAQAIAAQAAAAyAAkAAQAJAAQAAAA=")
 tile_set = SubResource("TileSet_i7j26")
 
-[node name="Player" parent="." instance=ExtResource("6_pdlix")]
+[node name="Portal" parent="." instance=ExtResource("9_nwdel")]
+position = Vector2(759, 74)
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("6_pdlix")]
 position = Vector2(-29, 69)
 
 [node name="CatEnemy1" parent="." instance=ExtResource("10_ryxav")]
 position = Vector2(202, 151)
-
-[node name="Portal" parent="." instance=ExtResource("9_nwdel")]
-position = Vector2(759, 74)
 
 [node name="Trigger Area" type="Node2D" parent="."]
 
