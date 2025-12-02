@@ -79,11 +79,12 @@ radius = 17.029387
 [node name="Orb" type="Node2D" groups=["orb"]]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.980997, 0.2111556, 0.4051364, 1)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_jlymj")
 animation = &"Orb"
 autoplay = "Orb"
-frame_progress = 0.65937614
+frame_progress = 0.12801185
 
 [node name="Area2D" type="Area2D" parent="."]
 
