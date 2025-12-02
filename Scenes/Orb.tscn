@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://diranjy8hn8vn"]
+[gd_scene load_steps=14 format=3 uid="uid://diranjy8hn8vn"]
 
 [ext_resource type="Texture2D" uid="uid://h4o57klf2fyu" path="res://Assets/Wind Effect 02/Air Explosion.png" id="1_ovppq"]
 
@@ -76,10 +76,14 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_ovppq"]
 radius = 17.029387
 
+[sub_resource type="Environment" id="Environment_ovppq"]
+background_mode = 3
+glow_enabled = true
+glow_blend_mode = 0
+
 [node name="Orb" type="Node2D" groups=["orb"]]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-modulate = Color(0.980997, 0.2111556, 0.4051364, 1)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_jlymj")
 animation = &"Orb"
@@ -90,3 +94,6 @@ frame_progress = 0.12801185
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_ovppq")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ovppq")
