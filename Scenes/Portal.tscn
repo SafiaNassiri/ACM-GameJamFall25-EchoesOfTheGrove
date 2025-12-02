@@ -1,0 +1,62 @@
+[gd_scene load_steps=11 format=3 uid="uid://cvu7qfq8x4wbd"]
+
+[ext_resource type="Texture2D" uid="uid://b5632o3y4m7ar" path="res://Assets/Portal/portal1_frame_1.png" id="1_koq56"]
+[ext_resource type="Texture2D" uid="uid://da06e28ux2hy1" path="res://Assets/Portal/portal1_frame_2.png" id="2_hsgt0"]
+[ext_resource type="Texture2D" uid="uid://stxmshvqo817" path="res://Assets/Portal/portal1_frame_3.png" id="3_7shum"]
+[ext_resource type="Texture2D" uid="uid://c4hihrtpuum5b" path="res://Assets/Portal/portal1_frame_4.png" id="4_uwbmw"]
+[ext_resource type="Texture2D" uid="uid://d2nydm0qmu70h" path="res://Assets/Portal/portal1_frame_5.png" id="5_govl6"]
+[ext_resource type="Texture2D" uid="uid://d2w1n4s03h2jr" path="res://Assets/Portal/portal1_frame_6.png" id="6_q42mo"]
+[ext_resource type="Texture2D" uid="uid://02ayojs7qfj" path="res://Assets/Portal/portal1_frame_7.png" id="7_iep2n"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_koq56"]
+fill_from = Vector2(1, 0)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s3pkw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_koq56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hsgt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7shum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uwbmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_govl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q42mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iep2n")
+}],
+"loop": true,
+"name": &"protal",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_koq56"]
+size = Vector2(20, 35)
+
+[node name="Portal" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.37883115, 0.4018657)
+texture = SubResource("GradientTexture2D_koq56")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_s3pkw")
+animation = &"protal"
+autoplay = "protal"
+frame_progress = 0.78532696
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_koq56")
