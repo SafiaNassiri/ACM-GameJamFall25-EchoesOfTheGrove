@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dqc3td44q71fq"
+path="res://.godot/imported/16 - The Calm Before The Storm.wav-5653cd8d7097ca60c040160b966a2aa6.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Loopable + one shots/wav/16 - The Calm Before The Storm.wav"
+dest_files=["res://.godot/imported/16 - The Calm Before The Storm.wav-5653cd8d7097ca60c040160b966a2aa6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

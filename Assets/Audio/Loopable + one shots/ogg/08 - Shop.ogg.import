@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dsepnx14aw7f0"
+path="res://.godot/imported/08 - Shop.ogg-4acb9d4c315b2ef371308adad66a1e4a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Loopable + one shots/ogg/08 - Shop.ogg"
+dest_files=["res://.godot/imported/08 - Shop.ogg-4acb9d4c315b2ef371308adad66a1e4a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

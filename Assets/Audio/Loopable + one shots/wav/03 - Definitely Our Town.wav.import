@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bn0l8d25dpv0m"
+path="res://.godot/imported/03 - Definitely Our Town.wav-58df4c9b332298a02b3ec851268d30e3.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Loopable + one shots/wav/03 - Definitely Our Town.wav"
+dest_files=["res://.godot/imported/03 - Definitely Our Town.wav-58df4c9b332298a02b3ec851268d30e3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

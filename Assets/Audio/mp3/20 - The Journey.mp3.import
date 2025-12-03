@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xoawb1p1wwuf"
+path="res://.godot/imported/20 - The Journey.mp3-5bf9c3aa79a03b40098a35e6753241bd.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/mp3/20 - The Journey.mp3"
+dest_files=["res://.godot/imported/20 - The Journey.mp3-5bf9c3aa79a03b40098a35e6753241bd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

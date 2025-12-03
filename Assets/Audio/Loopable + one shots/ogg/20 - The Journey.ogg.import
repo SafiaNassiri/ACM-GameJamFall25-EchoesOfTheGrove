@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://gs5pldrx7dkj"
+path="res://.godot/imported/20 - The Journey.ogg-7d4920fe2338dba5e80d5318f1fc326b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Loopable + one shots/ogg/20 - The Journey.ogg"
+dest_files=["res://.godot/imported/20 - The Journey.ogg-7d4920fe2338dba5e80d5318f1fc326b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

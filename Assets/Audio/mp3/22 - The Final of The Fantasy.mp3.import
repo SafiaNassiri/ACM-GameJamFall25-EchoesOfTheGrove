@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://na5jl1vl32fj"
+path="res://.godot/imported/22 - The Final of The Fantasy.mp3-2c5a2600c070ae5075363f68451d83bd.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/mp3/22 - The Final of The Fantasy.mp3"
+dest_files=["res://.godot/imported/22 - The Final of The Fantasy.mp3-2c5a2600c070ae5075363f68451d83bd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

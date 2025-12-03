@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://endpqbyyrjqs"
+path="res://.godot/imported/11 - The Mighty Kingdom.ogg-86ccfe90f5a176273f0bbd43cc1ab9cd.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Loopable + one shots/ogg/11 - The Mighty Kingdom.ogg"
+dest_files=["res://.godot/imported/11 - The Mighty Kingdom.ogg-86ccfe90f5a176273f0bbd43cc1ab9cd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
