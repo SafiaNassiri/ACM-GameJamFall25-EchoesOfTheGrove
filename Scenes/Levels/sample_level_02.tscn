@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dxjxyquwxc4f0" path="res://Assets/Sprites/stringstar_fields/tileset.png" id="5_ib6bj"]
 [ext_resource type="PackedScene" uid="uid://c6d0epgnqqkw6" path="res://Scenes/UserInterface/UI.tscn" id="7_pn8g1"]
 
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27x7k"]
 texture = ExtResource("5_ib6bj")
 0:0/0 = 0
@@ -552,3 +551,9 @@ position = Vector2(1, 194)
 shape = SubResource("WorldBoundaryShape2D_8o7jr")
 
 [node name="Ui" parent="." instance=ExtResource("7_pn8g1")]
+
+[node name="TimerLabel" parent="Ui" index="0"]
+start_time = 20.0
+time_bonus_on_death = 10.0
+
+[editable path="Ui"]

@@ -647,3 +647,9 @@ position = Vector2(548, 167)
 position = Vector2(422, 72)
 
 [node name="Ui" parent="." instance=ExtResource("11_yv8ip")]
+
+[node name="TimerLabel" parent="Ui" index="0"]
+start_time = 10.0
+time_bonus_on_death = 10.0
+
+[editable path="Ui"]
