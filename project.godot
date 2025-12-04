@@ -21,6 +21,7 @@ boot_splash/minimum_display_time=3000
 [autoload]
 
 TimerState="*res://Scripts/Autoloads/TimerState.gd"
+BgMusicPlayer="*res://Scenes/bg_music_player.tscn"
 
 [debug]
 
