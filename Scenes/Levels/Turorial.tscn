@@ -593,7 +593,7 @@ position = Vector2(759, 74)
 [node name="BeigeCatEnemy" parent="." instance=ExtResource("9_wk0ou")]
 position = Vector2(209, 143)
 
-[node name="Player" parent="." groups=["Player"] instance=ExtResource("8_1r825")]
+[node name="Player" parent="." instance=ExtResource("8_1r825")]
 position = Vector2(-48, 46)
 
 [node name="Trigger Area" type="Node2D" parent="."]
