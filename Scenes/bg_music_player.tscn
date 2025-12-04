@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://jyb04ctwlr00"]
+
+[ext_resource type="AudioStream" uid="uid://cdkse51ixokrb" path="res://Assets/Audio/Loopable + one shots/wav/04 - Silent Forest.wav" id="1_1wrgp"]
+
+[node name="BGMusicPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_1wrgp")
+autoplay = true
