@@ -53,8 +53,8 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibbp7"]
-size = Vector2(19, 14)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfljq"]
+size = Vector2(22, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1toq"]
 size = Vector2(20, 15)
@@ -72,8 +72,8 @@ frame_progress = 0.505902
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitbox"]
-position = Vector2(1.5, 8)
-shape = SubResource("RectangleShape2D_ibbp7")
+position = Vector2(1, 8)
+shape = SubResource("RectangleShape2D_bfljq")
 
 [node name="PatrolChecks" type="Node2D" parent="."]
 

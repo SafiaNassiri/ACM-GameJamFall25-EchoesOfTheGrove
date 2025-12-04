@@ -593,7 +593,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lhliw"]
 size = Vector2(10, 18)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Player"]]
 sprite_frames = SubResource("SpriteFrames_3bga3")

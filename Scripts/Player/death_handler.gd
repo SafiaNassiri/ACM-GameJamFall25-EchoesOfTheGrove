@@ -1,4 +1,5 @@
 extends Node
+class_name DeathHandler
 
 var _is_dying: bool = false
 
@@ -11,7 +12,7 @@ func die() -> void:
 		return
 	_is_dying = true
 
-	# stop movement/animation controllers so they don't overwrite "death" animation
+	# Stop all other scripts on the player so animations aren't overwritten
 	for child in get_parent().get_children():
 		if child != self and not (child == sprite or child == anim):
 			child.set_process(false)
@@ -30,4 +31,5 @@ func die() -> void:
 		anim.play("death")
 		await anim.animation_finished
 
+	# Reload scene
 	get_tree().reload_current_scene()
