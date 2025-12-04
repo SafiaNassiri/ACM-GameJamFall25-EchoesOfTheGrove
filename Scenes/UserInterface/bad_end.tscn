@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bpmpqyxpkw4l2" path="res://Assets/Sprites/sky_and_clouds_bg/New free backgrounds part2/background 1/3.png" id="3_vp12d"]
 [ext_resource type="Texture2D" uid="uid://dicia1tagncnf" path="res://Assets/Sprites/sky_and_clouds_bg/New free backgrounds part2/background 1/4.png" id="4_stov7"]
 [ext_resource type="FontFile" uid="uid://dx6nbsbqegcnj" path="res://Fonts/PixelOperator.ttf" id="5_g6dhs"]
+[ext_resource type="Script" uid="uid://csafc82e2d2jj" path="res://Scripts/UI/bad_end.gd" id="6_wwvg6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_opfnp"]
 font = ExtResource("5_g6dhs")
@@ -14,13 +15,6 @@ font_color = Color(1, 0.29037324, 0.28895915, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_cp0ys"]
 font = ExtResource("5_g6dhs")
 font_color = Color(1, 0.2901961, 0.2901961, 1)
-
-[sub_resource type="GDScript" id="GDScript_trj04"]
-script/source = "extends Button
-
-
-
-"
 
 [sub_resource type="LabelSettings" id="LabelSettings_yhxw7"]
 font = ExtResource("5_g6dhs")
@@ -108,6 +102,7 @@ offset_top = 32.0
 offset_right = 18.0
 offset_bottom = 162.0
 grow_horizontal = 2
+theme_override_constants/line_spacing = 1
 text = "At the base of the Hourseed Tree,
 Thistle places the gathered orbs.
 Time begins to move once more.
@@ -130,7 +125,7 @@ offset_right = 77.0
 offset_bottom = 79.0
 grow_horizontal = 2
 grow_vertical = 2
-script = SubResource("GDScript_trj04")
+script = ExtResource("6_wwvg6")
 
 [node name="quitlabel" type="Label" parent="."]
 layout_mode = 1
@@ -144,3 +139,5 @@ grow_horizontal = 2
 text = "QUIT"
 label_settings = SubResource("LabelSettings_yhxw7")
 horizontal_alignment = 1
+
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]

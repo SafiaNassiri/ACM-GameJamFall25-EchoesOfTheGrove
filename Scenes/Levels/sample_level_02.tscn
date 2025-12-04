@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://x12osr27xaeb"]
+[gd_scene load_steps=25 format=4 uid="uid://x12osr27xaeb"]
 
 [ext_resource type="Texture2D" uid="uid://dk21jjdqu8bvg" path="res://Assets/Sprites/sky_and_clouds_bg/New free backgrounds part2/background 1/1.png" id="1_27x7k"]
 [ext_resource type="PackedScene" uid="uid://b7poyxaahhbiv" path="res://Scenes/Player/player.tscn" id="1_jtp72"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ctj1kd718ih4b" path="res://Scenes/CatEnemy/BeigeCatEnemy.tscn" id="10_5f8po"]
 [ext_resource type="PackedScene" uid="uid://bc5g6m3w0b0wg" path="res://Scenes/CatEnemy/OrangeCatEnemy.tscn" id="11_pefh0"]
 [ext_resource type="PackedScene" uid="uid://cajitjqg2wrkh" path="res://Scenes/Interactables/MovingPlatform.tscn" id="12_pefh0"]
+[ext_resource type="PackedScene" uid="uid://cvu7qfq8x4wbd" path="res://Scenes/Interactables/Portal.tscn" id="13_233x5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8d66o"]
 texture = ExtResource("7_l2evh")
@@ -693,7 +694,11 @@ move_offset = Vector2(0, -757)
 speed = 100.0
 
 [node name="Player" parent="." instance=ExtResource("1_jtp72")]
-position = Vector2(29, 142)
+position = Vector2(3212, 219)
+
+[node name="Portal" parent="." instance=ExtResource("13_233x5")]
+position = Vector2(3362, 215)
+next_level_path = "res://Scenes/UserInterface/good_end.tscn"
 
 [editable path="EnemyCats/Bottom Level/OrangeCatEnemy3"]
 [editable path="EnemyCats/Bottom Level/BeigeCatEnemy2"]
