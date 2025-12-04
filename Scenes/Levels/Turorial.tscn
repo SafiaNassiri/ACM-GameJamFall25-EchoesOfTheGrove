@@ -652,4 +652,7 @@ position = Vector2(422, 72)
 start_time = 10.0
 time_bonus_on_death = 10.0
 
+[node name="OrbLabel" parent="Ui" index="1"]
+orb_max = 2
+
 [editable path="Ui"]

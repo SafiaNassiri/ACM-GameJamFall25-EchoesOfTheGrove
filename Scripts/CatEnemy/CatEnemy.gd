@@ -12,52 +12,52 @@ extends CharacterBody2D
 var direction := 1.0
 
 func _ready() -> void:
-	print("THIS CAT IS ACTIVE")
-	#ledge_check.enabled = true
-	wall_check.enabled = true
+    print("THIS CAT IS ACTIVE")
+    #ledge_check.enabled = true
+    wall_check.enabled = true
 
-	#ledge_check.collision_mask = 1 << 0
-	wall_check.collision_mask = 1 << 0
+    #ledge_check.collision_mask = 1 << 0
+    wall_check.collision_mask = 1 << 0
 
 func _physics_process(delta: float) -> void:
-	print("Wall colliding:", wall_check.is_colliding())
+    #print("Wall colliding:", wall_check.is_colliding())
 
-	if not is_on_floor():
-		velocity.y += gravity * delta
-	else:
-		velocity.y = 0
+    if not is_on_floor():
+        velocity.y += gravity * delta
+    else:
+        velocity.y = 0
 
-	velocity.x = walk_speed * direction
+    velocity.x = walk_speed * direction
 
-	#ledge_check.force_raycast_update()
-	wall_check.force_raycast_update()
+    #ledge_check.force_raycast_update()
+    wall_check.force_raycast_update()
 
-	#if not ledge_check.is_colliding():
-		#_flip_direction()
+    #if not ledge_check.is_colliding():
+        #_flip_direction()
 
-	if wall_check.is_colliding():
-		_flip_direction()
+    if wall_check.is_colliding():
+        _flip_direction()
 
-	move_and_slide()
+    move_and_slide()
 
-	sprite.play("Run")
+    sprite.play("Run")
 
 func _flip_direction() -> void:
-	direction = -direction
+    direction = -direction
 
-	# flip sprite
-	sprite.flip_h = (direction < 0)
+    # flip sprite
+    sprite.flip_h = (direction < 0)
 
-	# flip raycasts node
-	patrol_checks.scale.x = direction
+    # flip raycasts node
+    patrol_checks.scale.x = direction
 
-	print("Flipped to", direction)
+    #print("Flipped to", direction)
 
 func take_damage(amount: int) -> void:
-	health -= amount
-	if health <= 0:
-		queue_free()
+    health -= amount
+    if health <= 0:
+        queue_free()
 
 func _on_attack_hitbox_body_entered(body: Node) -> void:
-	if body.is_in_group("player") and body.has_method("die"):
-		body.die()
+    if body.is_in_group("player") and body.has_method("die"):
+        body.die()
