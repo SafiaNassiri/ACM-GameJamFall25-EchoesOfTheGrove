@@ -41,8 +41,11 @@ func move_loop() -> void:
 			for player in players_on_platform:
 				if player:
 					player.global_position += delta_pos
-
-			await get_tree().physics_frame
+			
+			if is_instance_valid(get_tree()):
+				await get_tree().physics_frame
+			else:
+				return
 
 		global_position = target_pos
 		await get_tree().create_timer(wait_time).timeout
