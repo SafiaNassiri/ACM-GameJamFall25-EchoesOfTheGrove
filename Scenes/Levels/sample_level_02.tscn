@@ -675,6 +675,7 @@ time_bonus_on_death = 10.0
 position = Vector2(992, 220)
 move_offset = Vector2(0, 800)
 speed = 80.0
+wait_time = null
 platform_area_path = NodePath("Area2D")
 
 [node name="Player" parent="." instance=ExtResource("1_jtp72")]
