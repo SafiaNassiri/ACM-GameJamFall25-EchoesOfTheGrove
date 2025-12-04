@@ -1,9 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6d0epgnqqkw6"]
+[gd_scene load_steps=8 format=3 uid="uid://c6d0epgnqqkw6"]
 
 [ext_resource type="FontFile" uid="uid://dx6nbsbqegcnj" path="res://Fonts/PixelOperator.ttf" id="1_oh87e"]
 [ext_resource type="Script" uid="uid://dtdt3egbuso3d" path="res://Scripts/UI/timer_label.gd" id="2_chlih"]
+[ext_resource type="Script" uid="uid://cyalsfx6srd3j" path="res://Scripts/UI/orb_label.gd" id="3_8o5xq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_chlih"]
+font = ExtResource("1_oh87e")
+
+[sub_resource type="LabelSettings" id="LabelSettings_8o5xq"]
+font = ExtResource("1_oh87e")
+
+[sub_resource type="LabelSettings" id="LabelSettings_fbeup"]
+font = ExtResource("1_oh87e")
+font_color = Color(0.9002777, 0.32282537, 0.36401382, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_riphc"]
 font = ExtResource("1_oh87e")
 
 [node name="Ui" type="CanvasLayer"]
@@ -14,7 +25,85 @@ offset_left = 268.0
 offset_top = 7.0
 offset_right = 308.0
 offset_bottom = 39.0
-text = "10"
+text = "<TIMER LABEL>"
 label_settings = SubResource("LabelSettings_chlih")
 horizontal_alignment = 2
 script = ExtResource("2_chlih")
+
+[node name="OrbLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 76.0
+offset_bottom = 30.0
+text = "<ORB LABEL>"
+label_settings = SubResource("LabelSettings_8o5xq")
+script = ExtResource("3_8o5xq")
+
+[node name="DeathUI" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="DeathUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.047143243, 0.07948097, 0.117901646, 1)
+
+[node name="Label" type="Label" parent="DeathUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.5
+offset_top = -50.5
+offset_right = 41.5
+offset_bottom = -27.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "You have died"
+label_settings = SubResource("LabelSettings_fbeup")
+
+[node name="Label2" type="Label" parent="DeathUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -41.5
+offset_top = -25.0
+offset_right = 41.5
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "All orbs have been reset  |  Time increased"
+label_settings = SubResource("LabelSettings_riphc")
+
+[node name="Label3" type="Label" parent="DeathUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -132.5
+offset_top = -105.0
+offset_right = 132.5
+offset_bottom = -82.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "\"Insert awsome lore\""
+label_settings = SubResource("LabelSettings_riphc")
+horizontal_alignment = 1
