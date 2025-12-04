@@ -7,7 +7,7 @@ extends CharacterBody2D
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 #@onready var ledge_check: RayCast2D = $PatrolChecks/LedgeCheck
 @onready var wall_check: RayCast2D = $PatrolChecks/WallCheck
-@onready var patrol_checks: Node2D = $PatrolChecks   # <-- FIXED HERE
+@onready var patrol_checks: Node2D = $PatrolChecks 
 
 var direction := 1.0
 

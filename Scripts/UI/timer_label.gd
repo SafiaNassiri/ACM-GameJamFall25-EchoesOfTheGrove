@@ -42,18 +42,13 @@ func reset_timer() -> void:
 	finished = false
 	timer_label.text = str(int(ceil(time_left)))
 
-# -------------------------------------------------------
-# NEW: Add bonus time each time the player respawns
-# -------------------------------------------------------
 func add_time_on_respawn() -> void:
 	time_left = start_time + time_bonus_on_death
 	start_time = time_left  
-	TimerState.current_start_time = start_time  # ← SAVE IT
+	TimerState.current_start_time = start_time 
 	finished = false
 	timer_label.text = str(int(ceil(time_left)))
-# -------------------------------------------------------
 
-# ---- Find DeathHandler node ----
 func _resolve_death_handler() -> void:
 	await get_tree().process_frame
 
