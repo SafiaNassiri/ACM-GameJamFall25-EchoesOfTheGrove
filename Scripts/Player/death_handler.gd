@@ -35,9 +35,7 @@ func die() -> void:
     var prev_death_visible: bool = death_ui.visible if death_ui != null else false
     if is_instance_valid(death_ui):
         death_ui.visible = true
-    await get_tree().create_timer(5.0).timeout
-    if is_instance_valid(death_ui):
-        death_ui.visible = prev_death_visible
+    await get_tree().create_timer(3.0).timeout
 
     # Reload scene
     get_tree().reload_current_scene()
