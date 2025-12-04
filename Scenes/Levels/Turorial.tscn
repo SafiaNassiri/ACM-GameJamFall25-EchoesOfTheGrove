@@ -572,7 +572,7 @@ centered = false
 [node name="Tile Layers" type="Node2D" parent="."]
 
 [node name="Decorations" type="TileMapLayer" parent="Tile Layers"]
-tile_map_data = PackedByteArray("AAAAAAQAAQAAAAAAAAAJAAgAAQAAAAAAAAAtAAUAAQAAAAAAAAAWAAgAAQAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAJAAgAAQAAAAAAAAAtAAUAAQAAAAAAAAAWAAgAAQAAAAAAAAD9/wQAAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_vwu32")
 
 [node name="Ground" type="TileMapLayer" parent="Tile Layers"]
@@ -599,10 +599,10 @@ position = Vector2(-48, 46)
 [node name="Trigger Area" type="Node2D" parent="."]
 
 [node name="WalkSign" type="Area2D" parent="Trigger Area" groups=["sign"]]
-position = Vector2(7, 70)
+position = Vector2(-52, 67)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger Area/WalkSign"]
-position = Vector2(1, 0)
+position = Vector2(11, 1)
 shape = SubResource("RectangleShape2D_s5ydj")
 
 [node name="Prompt" type="Node2D" parent="Trigger Area/WalkSign"]
@@ -651,8 +651,5 @@ position = Vector2(422, 72)
 [node name="TimerLabel" parent="Ui" index="0"]
 start_time = 10.0
 time_bonus_on_death = 10.0
-
-[node name="OrbLabel" parent="Ui" index="1"]
-orb_max = 2
 
 [editable path="Ui"]
