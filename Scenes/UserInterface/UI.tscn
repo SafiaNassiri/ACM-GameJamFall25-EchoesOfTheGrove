@@ -3,7 +3,6 @@
 [ext_resource type="FontFile" uid="uid://dx6nbsbqegcnj" path="res://Fonts/PixelOperator.ttf" id="1_oh87e"]
 [ext_resource type="Script" uid="uid://dtdt3egbuso3d" path="res://Scripts/UI/timer_label.gd" id="2_chlih"]
 
-
 [sub_resource type="LabelSettings" id="LabelSettings_chlih"]
 font = ExtResource("1_oh87e")
 

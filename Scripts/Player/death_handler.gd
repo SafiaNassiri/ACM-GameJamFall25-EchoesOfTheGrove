@@ -1,7 +1,5 @@
 extends Node
 
-@export var restart_scene_path: String = "res://Scenes/sample_level_02.tscn"
-
 var _is_dying: bool = false
 
 @onready var body: CharacterBody2D = get_parent() as CharacterBody2D
@@ -32,4 +30,4 @@ func die() -> void:
 		anim.play("death")
 		await anim.animation_finished
 
-	get_tree().change_scene_to_file(restart_scene_path)
+	get_tree().reload_current_scene()

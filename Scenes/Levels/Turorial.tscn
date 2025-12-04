@@ -590,11 +590,11 @@ tile_set = SubResource("TileSet_i7j26")
 [node name="Portal" parent="." instance=ExtResource("7_5uteb")]
 position = Vector2(759, 74)
 
+[node name="BeigeCatEnemy" parent="." instance=ExtResource("9_wk0ou")]
+position = Vector2(209, 143)
+
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("8_1r825")]
 position = Vector2(-48, 46)
-
-[node name="CatEnemy1" parent="." instance=ExtResource("9_wk0ou")]
-position = Vector2(202, 151)
 
 [node name="Trigger Area" type="Node2D" parent="."]
 

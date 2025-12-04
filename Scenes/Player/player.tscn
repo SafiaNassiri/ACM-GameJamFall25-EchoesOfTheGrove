@@ -394,7 +394,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"dash",
-"speed": 6.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -429,7 +429,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"death",
-"speed": 6.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -492,7 +492,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 6.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -544,7 +544,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"right",
-"speed": 6.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -595,10 +595,11 @@ size = Vector2(10, 18)
 
 [node name="Player" type="CharacterBody2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Player"]]
 sprite_frames = SubResource("SpriteFrames_3bga3")
-animation = &"hurt"
+animation = &"right"
 autoplay = "idle"
+frame_progress = 0.40266216
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 2)

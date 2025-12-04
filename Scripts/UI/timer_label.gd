@@ -10,6 +10,10 @@ var finished: bool = false
 var death_handler: Node = null
 
 func _ready() -> void:
+	# Use saved start_time if it exists
+	if TimerState.current_start_time > 0:
+		start_time = TimerState.current_start_time
+
 	reset_timer()
 	_resolve_death_handler()
 
@@ -43,7 +47,8 @@ func reset_timer() -> void:
 # -------------------------------------------------------
 func add_time_on_respawn() -> void:
 	time_left = start_time + time_bonus_on_death
-	start_time = time_left  # update baseline so each death keeps stacking
+	start_time = time_left  
+	TimerState.current_start_time = start_time  # ← SAVE IT
 	finished = false
 	timer_label.text = str(int(ceil(time_left)))
 # -------------------------------------------------------

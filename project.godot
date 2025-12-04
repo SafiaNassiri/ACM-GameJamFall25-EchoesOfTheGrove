@@ -18,6 +18,10 @@ config/icon="uid://d0scwj1peor1r"
 config/windows_native_icon="res://icon.ico"
 boot_splash/minimum_display_time=3000
 
+[autoload]
+
+TimerState="*res://Scripts/Autoloads/TimerState.gd"
+
 [debug]
 
 gdscript/warnings/untyped_declaration=2
