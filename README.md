@@ -53,10 +53,10 @@ Thistle’s form scatters into motes of light, carried on the forest’s breath.
 
 | Action | Key / Button |
 |--------|---------------|
-| Move | ← / → or A / D / joycon (controller)|
-| Jump | Space / A (controller) |
-| Dash | Shift / RT |
-| Interact / Play | Enter / X |
+| Move | ← / → or A / D|
+| Jump | Space / ↑|
+| Dash | L Shift / R Shift |
+| Interact / Play | Enter |
 | Pause | Esc |
 
 ---
@@ -66,9 +66,9 @@ Thistle’s form scatters into motes of light, carried on the forest’s breath.
 - **Engine:** Godot  
 - **Development Time:** 1 Month
 - **Team:**  
-  - **Design & Programming:** *Jaymesa nd Safia*  
-  - **Art & Animation:** *itch.io tbd*  
-  - **Music & Sound:** *itch.io tbd*  
+  - **Design & Programming:** *Jaymes and Safia*  
+  - **Art & Animation:** *itch.io*  
+  - **Music & Sound:** *itch.io*  
   - **Writing:** *Safia*
 
 ---
@@ -82,7 +82,11 @@ A quiet story about running, remembering, and letting go.
 
 ## Known Issues / Future Ideas
 
-- [ ] TBD
+- [ ] Win condition alway returns the Good Ending no matter what
+- [ ] Player doenst stick to platforms when it moves up or down
+- [ ] Ending scene text over laps behind 'MainMenu' button
+- [ ] Adding controller support
+- [ ] 
 
 ---
 
@@ -94,3 +98,5 @@ All assest and sounds aquired from itch.io
 Please credit the creators if you remix or reuse any part of this project.
 
 ---
+
+Made with 💙 by *V.O.I.D.* 
