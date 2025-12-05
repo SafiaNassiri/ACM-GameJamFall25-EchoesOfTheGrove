@@ -694,7 +694,7 @@ move_offset = Vector2(0, -757)
 speed = 100.0
 
 [node name="Player" parent="." instance=ExtResource("1_jtp72")]
-position = Vector2(3212, 219)
+position = Vector2(33, 146)
 
 [node name="Portal" parent="." instance=ExtResource("13_233x5")]
 position = Vector2(3362, 215)

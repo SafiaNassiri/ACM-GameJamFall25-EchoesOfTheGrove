@@ -6,11 +6,11 @@ var orb_count: int = 0
 
 
 func _ready() -> void:
-	update_counter()
-	
+    update_counter()
+    
 func update_counter() -> void:
-	orb_label.text = "Orbs: " + str(orb_count) + "/" + str(orb_max)
-	
+    orb_label.text = "Orbs: " + str(orb_count) + "/" + str(orb_max)
+    
 func add_orb() -> void:
-	orb_count += 1
-	update_counter()
+    orb_count += 1
+    update_counter()
