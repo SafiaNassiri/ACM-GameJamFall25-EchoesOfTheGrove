@@ -86,7 +86,7 @@ A quiet story about running, remembering, and letting go.
 - [ ] Player doenst stick to platforms when it moves up or down
 - [ ] Ending scene text over laps behind 'MainMenu' button
 - [ ] Adding controller support
-- [ ] 
+- [ ] Adding more to level aesthetic
 
 ---
 
