@@ -526,7 +526,7 @@ repeat_size = Vector2(403, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/BG1"]
 texture_filter = 1
-position = Vector2(0, -333)
+position = Vector2(-3137, 101)
 scale = Vector2(6, 6)
 texture = ExtResource("2_pn8g1")
 centered = false
@@ -548,7 +548,7 @@ repeat_size = Vector2(403, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/BG3"]
 texture_filter = 1
-position = Vector2(0, -333)
+position = Vector2(-7, -331)
 scale = Vector2(6, 6)
 texture = ExtResource("4_xpsax")
 centered = false
@@ -609,25 +609,31 @@ timer_label = NodePath("../../../Ui/TimerLabel")
 
 [node name="Bottom Level" type="Node2D" parent="EnemyCats"]
 
-[node name="OrangeCatEnemy3" parent="EnemyCats/Bottom Level" instance=ExtResource("11_pefh0")]
+[node name="OrangeCatEnemy3" parent="EnemyCats/Bottom Level" node_paths=PackedStringArray("timer_label") instance=ExtResource("11_pefh0")]
 position = Vector2(2969, 1140)
+timer_label = NodePath("../../../Ui/TimerLabel")
 walk_speed = 90.0
 
-[node name="BeigeCatEnemy" parent="EnemyCats/Bottom Level" instance=ExtResource("10_5f8po")]
+[node name="BeigeCatEnemy" parent="EnemyCats/Bottom Level" node_paths=PackedStringArray("timer_label") instance=ExtResource("10_5f8po")]
 position = Vector2(2017, 1175)
+timer_label = NodePath("../../../Ui/TimerLabel")
 
-[node name="OrangeCatEnemy" parent="EnemyCats/Bottom Level" instance=ExtResource("11_pefh0")]
+[node name="OrangeCatEnemy" parent="EnemyCats/Bottom Level" node_paths=PackedStringArray("timer_label") instance=ExtResource("11_pefh0")]
 position = Vector2(2431, 1036)
+timer_label = NodePath("../../../Ui/TimerLabel")
 
-[node name="OrangeCatEnemy2" parent="EnemyCats/Bottom Level" instance=ExtResource("11_pefh0")]
+[node name="OrangeCatEnemy2" parent="EnemyCats/Bottom Level" node_paths=PackedStringArray("timer_label") instance=ExtResource("11_pefh0")]
 position = Vector2(1559, 1118)
+timer_label = NodePath("../../../Ui/TimerLabel")
 
-[node name="BeigeCatEnemy2" parent="EnemyCats/Bottom Level" instance=ExtResource("10_5f8po")]
+[node name="BeigeCatEnemy2" parent="EnemyCats/Bottom Level" node_paths=PackedStringArray("timer_label") instance=ExtResource("10_5f8po")]
 position = Vector2(1155, 1173)
+timer_label = NodePath("../../../Ui/TimerLabel")
 walk_speed = 90.0
 
-[node name="OrangeCatEnemy4" parent="EnemyCats/Bottom Level" instance=ExtResource("11_pefh0")]
+[node name="OrangeCatEnemy4" parent="EnemyCats/Bottom Level" node_paths=PackedStringArray("timer_label") instance=ExtResource("11_pefh0")]
 position = Vector2(566, 1036)
+timer_label = NodePath("../../../Ui/TimerLabel")
 
 [node name="Orbs" type="Node2D" parent="."]
 
@@ -675,26 +681,31 @@ time_bonus_on_death = 10.0
 
 [node name="Platform1" parent="Moving Platforms/Vertical" instance=ExtResource("12_pefh0")]
 position = Vector2(992, 220)
-move_offset = Vector2(0, 800)
 speed = 80.0
-platform_area_path = NodePath("Area2D")
+
+[node name="EndPos" parent="Moving Platforms/Vertical/Platform1" index="4"]
+position = Vector2(0, 830)
 
 [node name="Platform2" parent="Moving Platforms/Vertical" instance=ExtResource("12_pefh0")]
 position = Vector2(1659, 820)
-move_offset = Vector2(0, -260)
 speed = 70.0
-platform_area_path = NodePath("Area2D")
+
+[node name="EndPos" parent="Moving Platforms/Vertical/Platform2" index="4"]
+position = Vector2(123.00003, 245)
 
 [node name="Platform3" parent="Moving Platforms/Vertical" instance=ExtResource("12_pefh0")]
 position = Vector2(2751, 1026)
-move_offset = Vector2(0, -124)
 speed = 50.0
-platform_area_path = NodePath("Area2D")
+
+[node name="EndPos" parent="Moving Platforms/Vertical/Platform3" index="4"]
+position = Vector2(0, 134)
 
 [node name="Platform4" parent="Moving Platforms/Vertical" instance=ExtResource("12_pefh0")]
-position = Vector2(2459, 1030)
-move_offset = Vector2(0, -757)
-speed = 100.0
+position = Vector2(2458, 272)
+speed = 150.0
+
+[node name="EndPos" parent="Moving Platforms/Vertical/Platform4" index="4"]
+position = Vector2(0, 775)
 
 [node name="Player" parent="." instance=ExtResource("1_jtp72")]
 position = Vector2(33, 146)
@@ -709,3 +720,4 @@ next_level_path = "res://Scenes/UserInterface/good_end.tscn"
 [editable path="Moving Platforms/Vertical/Platform1"]
 [editable path="Moving Platforms/Vertical/Platform2"]
 [editable path="Moving Platforms/Vertical/Platform3"]
+[editable path="Moving Platforms/Vertical/Platform4"]

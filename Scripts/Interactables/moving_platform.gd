@@ -1,64 +1,59 @@
 extends Node2D
 
-@export var move_offset: Vector2 = Vector2(0, -64)
+@onready var platform_area: Area2D = $PlatformArea
+@onready var start_point_node: Node2D = $StartPos
+@onready var end_point_node: Node2D = $EndPos
+
 @export var speed: float = 40.0
-@export var wait_time: float = 1.0
-@export var platform_area_path: NodePath 
 
 var start_pos: Vector2
-var target_pos: Vector2
-var prev_pos: Vector2
-var platform_area: Area2D
+var end_pos: Vector2
+var current_target: Vector2
+var going_to_end: bool = true
+
 var players_on_platform: Array[CharacterBody2D] = []
 
 func _ready() -> void:
-    start_pos = global_position
-    target_pos = start_pos + move_offset
-    prev_pos = global_position
+	# Capture their initial world positions ONCE
+	start_pos = start_point_node.global_position
+	end_pos = end_point_node.global_position
 
-    if platform_area_path != NodePath(""):
-        platform_area = get_node_or_null(platform_area_path) as Area2D
-        if platform_area:
-            platform_area.body_entered.connect(_on_body_entered)
-            platform_area.body_exited.connect(_on_body_exited)
-        else:
-            push_error("Platform Area2D not found! Check platform_area_path.")
+	# Optionally move platform to start
+	global_position = start_pos
+	current_target = end_pos
 
-    # Start the movement as a coroutine
-    _move_loop_async()
-
-func _move_loop_async() -> void:
-    move_loop()
-
-func move_loop() -> void:
-    while true:
-        while global_position.distance_to(target_pos) > 1.0:
-            var delta_pos: Vector2 = (target_pos - global_position).normalized() * speed * get_physics_process_delta_time()
-            global_position += delta_pos
-
-            for player in players_on_platform:
-                if player:
-                    player.global_position += delta_pos
-            
-            if is_instance_valid(get_tree()):
-                await get_tree().physics_frame
-            else:
-                return
-
-        global_position = target_pos
-        await get_tree().create_timer(wait_time).timeout
-
-        var temp: Vector2 = start_pos
-        start_pos = target_pos
-        target_pos = temp
+	platform_area.body_entered.connect(_on_body_entered)
+	platform_area.body_exited.connect(_on_body_exited)
 
 func _physics_process(delta: float) -> void:
-    prev_pos = global_position
+	var to_target: Vector2 = current_target - global_position
+
+	if to_target.length() > 1.0:
+		var move_vec: Vector2 = to_target.normalized() * speed * delta
+
+		# Don’t overshoot target
+		if move_vec.length() > to_target.length():
+			move_vec = to_target
+
+		# Move platform
+		global_position += move_vec
+
+		# Move any players riding it
+		for player in players_on_platform:
+			if player:
+				player.global_position += move_vec
+	else:
+		# Snap exactly to target
+		global_position = current_target
+
+		# Flip direction
+		going_to_end = not going_to_end
+		current_target = end_pos if going_to_end else start_pos
 
 func _on_body_entered(body: Node) -> void:
-    if body is CharacterBody2D:
-        players_on_platform.append(body)
+	if body is CharacterBody2D:
+		players_on_platform.append(body)
 
 func _on_body_exited(body: Node) -> void:
-    if body is CharacterBody2D and body in players_on_platform:
-        players_on_platform.erase(body)
+	if body is CharacterBody2D and body in players_on_platform:
+		players_on_platform.erase(body)
