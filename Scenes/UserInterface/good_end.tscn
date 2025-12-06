@@ -13,6 +13,7 @@ font_size = 32
 font_color = Color(1, 0.29037324, 0.28895915, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_cp0ys"]
+line_spacing = -9.0
 font = ExtResource("5_5kjbw")
 font_color = Color(1, 0.2901961, 0.2901961, 1)
 
@@ -102,8 +103,6 @@ offset_top = 33.0
 offset_right = -6.0
 offset_bottom = 163.0
 grow_horizontal = 2
-theme_override_constants/line_spacing = 1
-theme_override_constants/paragraph_spacing = 1
 text = "At the base of the Hourseed Tree,
 Thistle places the gathered orbs.
 Time begins to move once more.
