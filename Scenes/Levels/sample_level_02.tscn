@@ -595,14 +595,17 @@ shape = SubResource("WorldBoundaryShape2D_pefh0")
 
 [node name="Top Level" type="Node2D" parent="EnemyCats"]
 
-[node name="BeigeCatEnemy" parent="EnemyCats/Top Level" instance=ExtResource("10_5f8po")]
+[node name="BeigeCatEnemy" parent="EnemyCats/Top Level" node_paths=PackedStringArray("timer_label") instance=ExtResource("10_5f8po")]
 position = Vector2(1447, 256)
+timer_label = NodePath("../../../Ui/TimerLabel")
 
-[node name="OrangeCatEnemy" parent="EnemyCats/Top Level" instance=ExtResource("11_pefh0")]
+[node name="OrangeCatEnemy" parent="EnemyCats/Top Level" node_paths=PackedStringArray("timer_label") instance=ExtResource("11_pefh0")]
 position = Vector2(1738, 283)
+timer_label = NodePath("../../../Ui/TimerLabel")
 
-[node name="OrangeCatEnemy2" parent="EnemyCats/Top Level" instance=ExtResource("11_pefh0")]
+[node name="OrangeCatEnemy2" parent="EnemyCats/Top Level" node_paths=PackedStringArray("timer_label") instance=ExtResource("11_pefh0")]
 position = Vector2(2911, 300)
+timer_label = NodePath("../../../Ui/TimerLabel")
 
 [node name="Bottom Level" type="Node2D" parent="EnemyCats"]
 
@@ -663,7 +666,7 @@ position = Vector2(3431, 1136)
 [node name="Ui" parent="." instance=ExtResource("7_pn8g1")]
 
 [node name="TimerLabel" parent="Ui" index="0"]
-start_time = 60.0
+start_time = 120.0
 time_bonus_on_death = 10.0
 
 [node name="Moving Platforms" type="Node2D" parent="."]

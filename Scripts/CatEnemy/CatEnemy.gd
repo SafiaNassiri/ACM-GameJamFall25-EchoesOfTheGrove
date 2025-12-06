@@ -1,53 +1,42 @@
 extends CharacterBody2D
 
-@export var walk_speed: float = 30.0
-@export var gravity: float = 900.0
-
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var wall_check: RayCast2D = $PatrolChecks/WallCheck
-@onready var patrol_checks: Node2D = $PatrolChecks
 @onready var attack_hitbox: Area2D = $AttackHitbox
 
-@onready var time_label: Label = $"../Ui/TimerLabel"
+# NOTE: Must drag-and-drop the following nodes in the inspector to assign.
+@export var timer_label: Label
 
-var direction: float = 1.0
+# Change the per-sceen defaults in the inspector
+@export var walk_speed: float = 30.0
+@export var gravity: float = 980.0
+
+var direction: int = 1  # 1 = right, -1 = left
 
 func _ready() -> void:
-    print("Cat Enemy Active")
-    wall_check.enabled = true
-    wall_check.collision_mask = 1 << 0 
-
-    if attack_hitbox:
-        attack_hitbox.body_entered.connect(_on_attack_hitbox_body_entered)
+	if attack_hitbox:
+		attack_hitbox.body_entered.connect(_on_attack_hitbox_body_entered)
 
 func _physics_process(delta: float) -> void:
-    if not is_on_floor():
-        velocity.y += gravity * delta
-    else:
-        velocity.y = 0
+	if not is_on_floor():
+		velocity.y += gravity * delta
+	else:
+		velocity.y = 0.0
 
-    velocity.x = walk_speed * direction
+	velocity.x = walk_speed * direction
 
-    wall_check.force_raycast_update()
+	move_and_slide()
 
-    if wall_check.is_colliding():
-        _flip_direction()
+	if is_on_wall():
+		_flip_direction()
 
-    move_and_slide()
-
-    sprite.play("Run")
+	sprite.play("Run")
 
 func _flip_direction() -> void:
-    direction = -direction
-    sprite.flip_h = direction < 0
-    patrol_checks.scale.x = direction
+	direction = -direction
+	sprite.flip_h = direction < 0
 
 func _on_attack_hitbox_body_entered(body: Node) -> void:
-    if body.is_in_group("Player"):
-        if body.has_method("die"):
-            body.die()
-        else:
-            var dh: DeathHandler = body.get_node_or_null("DeathHandler")
-            if dh:
-                time_label.add_time_on_respawn()
-                dh.die()
+	var dh : DeathHandler = body.get_node_or_null("DeathHandler")
+	if body.is_in_group("Player") and dh and dh.has_method("die"):
+		timer_label.add_time_on_respawn()	# NOTE: Remove this if you don't want cat's to add more time to the timer.
+		dh.die()

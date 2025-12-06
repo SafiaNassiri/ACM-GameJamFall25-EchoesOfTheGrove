@@ -590,8 +590,9 @@ tile_set = SubResource("TileSet_i7j26")
 [node name="Portal" parent="." instance=ExtResource("7_5uteb")]
 position = Vector2(759, 74)
 
-[node name="BeigeCatEnemy" parent="." instance=ExtResource("9_wk0ou")]
+[node name="BeigeCatEnemy" parent="." node_paths=PackedStringArray("timer_label") instance=ExtResource("9_wk0ou")]
 position = Vector2(209, 143)
+timer_label = NodePath("../Ui/TimerLabel")
 
 [node name="Player" parent="." instance=ExtResource("8_1r825")]
 position = Vector2(-48, 46)
