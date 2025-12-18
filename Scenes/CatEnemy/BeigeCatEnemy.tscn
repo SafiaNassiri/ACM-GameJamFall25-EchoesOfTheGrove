@@ -1,7 +1,39 @@
-[gd_scene load_steps=12 format=3 uid="uid://ctj1kd718ih4b"]
+[gd_scene load_steps=20 format=3 uid="uid://ctj1kd718ih4b"]
 
 [ext_resource type="Script" uid="uid://bau4g1ftr7hf3" path="res://Scripts/CatEnemy/CatEnemy.gd" id="1_ktgnh"]
 [ext_resource type="Texture2D" uid="uid://bk7uv5bpr86o3" path="res://Assets/Sprites/cats/Cat/CAT 2.png" id="1_m54ux"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y080p"]
+atlas = ExtResource("1_m54ux")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dd41j"]
+atlas = ExtResource("1_m54ux")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vy4n"]
+atlas = ExtResource("1_m54ux")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ttp6"]
+atlas = ExtResource("1_m54ux")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0e5j"]
+atlas = ExtResource("1_m54ux")
+region = Rect2(128, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjl7w"]
+atlas = ExtResource("1_m54ux")
+region = Rect2(160, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n322c"]
+atlas = ExtResource("1_m54ux")
+region = Rect2(192, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqiub"]
+atlas = ExtResource("1_m54ux")
+region = Rect2(224, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m437u"]
 atlas = ExtResource("1_m54ux")
@@ -29,6 +61,35 @@ region = Rect2(416, 0, 32, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y080p"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y080p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dd41j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vy4n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ttp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0e5j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjl7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n322c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqiub")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_m437u")
@@ -61,14 +122,11 @@ size = Vector2(22, 13)
 
 [node name="BeigeCatEnemy" type="CharacterBody2D"]
 script = ExtResource("1_ktgnh")
-walk_speed = null
-gravity = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_y080p")
-animation = &"Run"
+animation = &"Idle"
 autoplay = "Run"
-frame_progress = 0.50859904
 
 [node name="AttackHitbox" type="Area2D" parent="."]
 collision_layer = 2
