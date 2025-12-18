@@ -85,8 +85,10 @@ A quiet story about running, remembering, and letting go.
 - [ ] Win condition alway returns the Good Ending no matter what
 - [ ] Player doenst stick to platforms when it moves up or down
 - [ ] Ending scene text over laps behind 'MainMenu' button
+- [x] Cat chases player
 - [ ] Adding controller support
 - [ ] Adding more to level aesthetic
+- [ ] Audio controls 
 
 ---
 
