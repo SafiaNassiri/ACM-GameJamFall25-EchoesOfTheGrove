@@ -88,7 +88,7 @@ A quiet story about running, remembering, and letting go.
 - [x] Cat chases player
 - [ ] Adding controller support
 - [ ] Adding more to level aesthetic
-- [ ] Audio controls 
+- [x] Audio controls 
 
 ---
 
