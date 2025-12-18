@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cuq4kk6tvaod0"]
+[gd_scene load_steps=10 format=3 uid="uid://cuq4kk6tvaod0"]
 
 [ext_resource type="Texture2D" uid="uid://dk21jjdqu8bvg" path="res://Assets/Sprites/sky_and_clouds_bg/New free backgrounds part2/background 1/1.png" id="1_3e50j"]
 [ext_resource type="Texture2D" uid="uid://tecw3t0l1x3j" path="res://Assets/Sprites/sky_and_clouds_bg/New free backgrounds part2/background 1/2.png" id="2_r3qcb"]
@@ -19,13 +19,6 @@ font_color = Color(1, 0.2901961, 0.2901961, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_yhxw7"]
 font = ExtResource("5_krngj")
 
-[sub_resource type="GDScript" id="GDScript_trj04"]
-script/source = "extends Button
-
-
-
-"
-
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -33,6 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("6_72bym")
 
 [node name="BG" type="Node2D" parent="."]
 
@@ -115,8 +109,9 @@ horizontal_alignment = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
+offset_left = 1.0
 offset_top = 57.0
-offset_bottom = 159.0
+offset_bottom = 89.0
 grow_horizontal = 2
 text = "Grove"
 label_settings = SubResource("LabelSettings_opfnp")
@@ -135,18 +130,46 @@ offset_right = 77.0
 offset_bottom = 37.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("6_72bym")
 
 [node name="playlabel" type="Label" parent="."]
+z_index = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 2.0
-offset_top = 110.0
-offset_right = 2.0
-offset_bottom = 133.0
+offset_left = 83.0
+offset_top = 111.0
+offset_right = -83.0
+offset_bottom = 127.0
 grow_horizontal = 2
 text = "PLAY"
+label_settings = SubResource("LabelSettings_yhxw7")
+horizontal_alignment = 1
+
+[node name="Seetings" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = 41.0
+offset_right = 76.0
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Settings" type="Label" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 82.0
+offset_top = 131.0
+offset_right = -84.0
+offset_bottom = 147.0
+grow_horizontal = 2
+text = "Settings"
 label_settings = SubResource("LabelSettings_yhxw7")
 horizontal_alignment = 1
 
@@ -158,25 +181,26 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -77.0
-offset_top = 40.0
+offset_top = 61.0
 offset_right = 77.0
-offset_bottom = 56.0
+offset_bottom = 77.0
 grow_horizontal = 2
 grow_vertical = 2
-script = SubResource("GDScript_trj04")
 
 [node name="quitlabel" type="Label" parent="."]
+z_index = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 2.0
-offset_top = 129.0
-offset_right = 2.0
-offset_bottom = 152.0
+offset_left = 83.0
+offset_top = 151.0
+offset_right = -83.0
+offset_bottom = 167.0
 grow_horizontal = 2
 text = "QUIT"
 label_settings = SubResource("LabelSettings_yhxw7")
 horizontal_alignment = 1
 
-[connection signal="button_up" from="Play" to="Play" method="_on_button_up"]
-[connection signal="button_up" from="Quit" to="Play" method="_on_quit_button_up"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Seetings" to="." method="_on_seetings_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

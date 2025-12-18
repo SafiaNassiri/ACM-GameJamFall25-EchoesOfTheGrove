@@ -6,3 +6,4 @@
 stream = ExtResource("1_1wrgp")
 volume_db = -10.0
 autoplay = true
+bus = &"Music"

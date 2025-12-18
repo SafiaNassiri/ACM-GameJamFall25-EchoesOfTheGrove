@@ -1,0 +1,159 @@
+[gd_scene load_steps=9 format=3 uid="uid://cr0oxofn4dkjk"]
+
+[ext_resource type="Script" uid="uid://bj7c8e7ape5x8" path="res://Scripts/AudioSettings.gd" id="1_b4tp7"]
+[ext_resource type="Texture2D" uid="uid://dk21jjdqu8bvg" path="res://Assets/Sprites/sky_and_clouds_bg/New free backgrounds part2/background 1/1.png" id="2_otsou"]
+[ext_resource type="Texture2D" uid="uid://tecw3t0l1x3j" path="res://Assets/Sprites/sky_and_clouds_bg/New free backgrounds part2/background 1/2.png" id="3_tpqsy"]
+[ext_resource type="Texture2D" uid="uid://bpmpqyxpkw4l2" path="res://Assets/Sprites/sky_and_clouds_bg/New free backgrounds part2/background 1/3.png" id="4_jppgx"]
+[ext_resource type="Texture2D" uid="uid://dicia1tagncnf" path="res://Assets/Sprites/sky_and_clouds_bg/New free backgrounds part2/background 1/4.png" id="5_bficf"]
+[ext_resource type="FontFile" uid="uid://dx6nbsbqegcnj" path="res://Fonts/PixelOperator.ttf" id="7_bficf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tpqsy"]
+font_color = Color(1, 0.2901961, 0.2901961, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_whrxb"]
+font = ExtResource("7_bficf")
+
+[node name="AudioSettings" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_b4tp7")
+
+[node name="BG" type="Node2D" parent="."]
+
+[node name="BG0" type="Parallax2D" parent="BG"]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(403, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/BG0"]
+texture_filter = 1
+position = Vector2(-27, -38)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_otsou")
+centered = false
+
+[node name="BG1" type="Parallax2D" parent="BG"]
+scroll_scale = Vector2(0.2, 0.2)
+repeat_size = Vector2(403, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/BG1"]
+texture_filter = 1
+position = Vector2(-27, -38)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_tpqsy")
+centered = false
+
+[node name="BG2" type="Parallax2D" parent="BG"]
+scroll_scale = Vector2(0.3, 0.3)
+repeat_size = Vector2(403, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/BG2"]
+texture_filter = 1
+position = Vector2(-27, -38)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_jppgx")
+centered = false
+
+[node name="BG3" type="Parallax2D" parent="BG"]
+scroll_scale = Vector2(0.4, 0.4)
+repeat_size = Vector2(403, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BG/BG3"]
+texture_filter = 1
+position = Vector2(-27, -38)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("5_bficf")
+centered = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 320.0
+offset_bottom = 31.0
+text = "SETTINGS	"
+label_settings = SubResource("LabelSettings_tpqsy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_top = 55.0
+offset_right = 320.0
+offset_bottom = 180.0
+
+[node name="MasterVolume" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/MasterVolume"]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+text = "Master Volume"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/MasterVolume"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="ValueLabel" type="Label" parent="VBoxContainer/MasterVolume"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+
+[node name="MusicVolume" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/MusicVolume"]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+text = "Music Volume"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/MusicVolume"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="ValueLabel" type="Label" parent="VBoxContainer/MusicVolume"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+
+[node name="SFXVolume" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/SFXVolume"]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+text = "SFX Volume"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/SFXVolume"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="ValueLabel" type="Label" parent="VBoxContainer/SFXVolume"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+
+[node name="Seetings" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 283.0
+offset_top = 160.0
+offset_right = 315.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Settings" type="Label" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 283.0
+offset_top = 160.0
+offset_right = 315.0
+offset_bottom = 176.0
+grow_horizontal = 2
+text = "<-"
+label_settings = SubResource("LabelSettings_whrxb")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Seetings" to="." method="_on_seetings_pressed"]
