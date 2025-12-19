@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://x12osr27xaeb"]
+[gd_scene load_steps=27 format=4 uid="uid://x12osr27xaeb"]
 
 [ext_resource type="Texture2D" uid="uid://dk21jjdqu8bvg" path="res://Assets/Sprites/sky_and_clouds_bg/New free backgrounds part2/background 1/1.png" id="1_27x7k"]
 [ext_resource type="PackedScene" uid="uid://b7poyxaahhbiv" path="res://Scenes/Player/player.tscn" id="1_jtp72"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bc5g6m3w0b0wg" path="res://Scenes/CatEnemy/OrangeCatEnemy.tscn" id="11_pefh0"]
 [ext_resource type="PackedScene" uid="uid://cajitjqg2wrkh" path="res://Scenes/Interactables/MovingPlatform.tscn" id="12_pefh0"]
 [ext_resource type="PackedScene" uid="uid://cvu7qfq8x4wbd" path="res://Scenes/Interactables/Portal.tscn" id="13_233x5"]
+[ext_resource type="FontFile" uid="uid://dx6nbsbqegcnj" path="res://Fonts/PixelOperator.ttf" id="14_sqfuc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8d66o"]
 texture = ExtResource("7_l2evh")
@@ -505,6 +506,10 @@ sources/1 = SubResource("TileSetAtlasSource_5f8po")
 normal = Vector2(-1, 0)
 distance = -37.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_233x5"]
+line_spacing = -6.0
+font = ExtResource("14_sqfuc")
+
 [node name="SampleLevel02" type="Node2D"]
 
 [node name="BG" type="Node2D" parent="."]
@@ -515,8 +520,8 @@ repeat_size = Vector2(403, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="BG/BG0"]
 texture_filter = 1
-position = Vector2(0, -333)
-scale = Vector2(6, 6)
+position = Vector2(-637, -934)
+scale = Vector2(7.1059027, 7.8549385)
 texture = ExtResource("1_27x7k")
 centered = false
 
@@ -712,7 +717,20 @@ position = Vector2(33, 146)
 
 [node name="Portal" parent="." instance=ExtResource("13_233x5")]
 position = Vector2(3362, 215)
-next_level_path = "res://Scenes/UserInterface/good_end.tscn"
+bad_ending_scene_path = "res://Scenes/UserInterface/bad_end.tscn"
+good_ending_scene_path = "res://Scenes/UserInterface/good_end.tscn"
+
+[node name="Portal Prompt" type="Label" parent="."]
+offset_left = 3319.0
+offset_top = 164.0
+offset_right = 3404.0
+offset_bottom = 187.0
+text = "Press E to enter portal"
+label_settings = SubResource("LabelSettings_233x5")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="body_exited" from="Portal" to="Portal" method="_on_body_exited"]
 
 [editable path="EnemyCats/Bottom Level/OrangeCatEnemy3"]
 [editable path="EnemyCats/Bottom Level/BeigeCatEnemy2"]

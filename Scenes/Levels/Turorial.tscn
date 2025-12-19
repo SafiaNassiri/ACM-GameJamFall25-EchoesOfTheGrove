@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://dgrl74clpngs1"]
+[gd_scene load_steps=25 format=4 uid="uid://dgrl74clpngs1"]
 
 [ext_resource type="Texture2D" uid="uid://dk21jjdqu8bvg" path="res://Assets/Sprites/sky_and_clouds_bg/New free backgrounds part2/background 1/1.png" id="1_f8nox"]
 [ext_resource type="Texture2D" uid="uid://tecw3t0l1x3j" path="res://Assets/Sprites/sky_and_clouds_bg/New free backgrounds part2/background 1/2.png" id="2_plt31"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ctj1kd718ih4b" path="res://Scenes/CatEnemy/BeigeCatEnemy.tscn" id="9_wk0ou"]
 [ext_resource type="PackedScene" uid="uid://diranjy8hn8vn" path="res://Scenes/Interactables/Orb.tscn" id="10_yl865"]
 [ext_resource type="PackedScene" uid="uid://c6d0epgnqqkw6" path="res://Scenes/UserInterface/UI.tscn" id="11_yv8ip"]
+[ext_resource type="FontFile" uid="uid://dx6nbsbqegcnj" path="res://Fonts/PixelOperator.ttf" id="12_plt31"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pdlix"]
 
@@ -501,6 +502,10 @@ texture = ExtResource("6_t28pv")
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_ti3ww")
 
+[sub_resource type="LabelSettings" id="LabelSettings_ognih"]
+line_spacing = -6.0
+font = ExtResource("12_plt31")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s5ydj"]
 size = Vector2(19, 21)
 
@@ -587,8 +592,19 @@ tile_set = SubResource("TileSet_kh52k")
 tile_map_data = PackedByteArray("AAAHAAMAAQAFAAQAAAAIAAMAAQAGAAQAAAAEAAUAAQAIAAQAAAAFAAUAAQAJAAQAAAAqAAoAAQAHAAQAAAArAAoAAQAGAAQAAAApAAoAAQAFAAQAAAAqAAcAAQAFAAQAAAArAAcAAQAGAAQAAAAxAAkAAQAIAAQAAAAyAAkAAQAJAAQAAAA=")
 tile_set = SubResource("TileSet_i7j26")
 
+[node name="Portal Prompt" type="Label" parent="."]
+offset_left = 716.0
+offset_top = 26.0
+offset_right = 801.0
+offset_bottom = 52.0
+text = "Press E to enter portal"
+label_settings = SubResource("LabelSettings_ognih")
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="Portal" parent="." instance=ExtResource("7_5uteb")]
 position = Vector2(759, 74)
+next_scene_path = "res://Scenes/Levels/sample_level_02.tscn"
 
 [node name="BeigeCatEnemy" parent="." node_paths=PackedStringArray("timer_label") instance=ExtResource("9_wk0ou")]
 position = Vector2(209, 143)
@@ -637,7 +653,7 @@ position = Vector2(369, -47)
 shape = SubResource("RectangleShape2D_s5ydj")
 
 [node name="Prompt" type="Node2D" parent="Trigger Area/ExitSign"]
-position = Vector2(369, -73)
+position = Vector2(369, -80)
 
 [node name="Orbs" type="Node2D" parent="."]
 
