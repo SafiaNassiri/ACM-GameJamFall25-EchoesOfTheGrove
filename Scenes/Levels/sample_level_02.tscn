@@ -677,7 +677,7 @@ position = Vector2(3431, 1136)
 [node name="Ui" parent="." instance=ExtResource("7_pn8g1")]
 
 [node name="TimerLabel" parent="Ui" index="0"]
-start_time = 120.0
+start_time = 800.0
 time_bonus_on_death = 10.0
 
 [node name="Moving Platforms" type="Node2D" parent="."]
