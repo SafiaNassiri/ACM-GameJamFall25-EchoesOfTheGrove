@@ -1,11 +1,11 @@
 # 🌿 Out of Time: Echoes of the Grove
 
-*A short, atmospheric Metroidvania created for the **ACM GameJam Fall'25** under the theme “Out of Time.”*
+*A short, atmospheric 2D platformer created for the **ACM GameJam Fall'25** under the theme “Out of Time.”*
 
 ---
 
 ## Overview
-**Out of Time: Echoes of the Grove** is a compact Metroidvania about a satyr named **Thistle**, racing through a dying forest where time itself is collapsing.
+**Out of Time: Echoes of the Grove** is a compact platformer about a satyr named **Thistle**, racing through a dying forest where time itself is collapsing.
 
 Explore the last living glade, uncover ancient relics, and reach the **Hourseed Tree** before the final second runs out.  
 Every death reveals fragments of forgotten lore and each run brings you closer to the truth.
